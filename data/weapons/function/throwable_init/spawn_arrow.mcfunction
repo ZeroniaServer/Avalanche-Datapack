@@ -1,5 +1,6 @@
+data merge entity @s {PierceLevel:10,Silent:1b,damage:0.0001d}
 data modify entity @s Owner set from storage avalanche:snowball UUID
-ride @s mount @e[type=snowball,tag=!HasPassenger,limit=1,sort=nearest]
-execute on vehicle run data modify storage avalanche:snowball Motion set from entity @s Motion
-data modify entity @s Motion set from storage avalanche:snowball Motion
+#TODO: don't just mount snowball, mount *owned* snowball
+ride @s mount @e[type=snowball,tag=owned,limit=1]
 tag @s add ThrowableArrow
+execute unless score @s entityidset matches 1 run function entityid:assign_tag

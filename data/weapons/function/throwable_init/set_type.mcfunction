@@ -6,3 +6,6 @@ tag @s add HasPassenger
 #quick debug - remove
 execute on passengers if entity @s[tag=Snowball] run say I'm a snowball!
 execute on passengers if entity @s[tag=Iceball] run say I'm an iceball!
+
+scoreboard players reset @s CmdData
+tag @s remove owned

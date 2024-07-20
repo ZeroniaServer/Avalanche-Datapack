@@ -3,16 +3,16 @@
     "block": [
       {
         "namespace": "^minecraft$",
-        "path": "recipes/.*"
+        "path": "recipe/.*"
       },
       {
         "namespace": "^minecraft$",
-        "path": "advancements/.*"
+        "path": "advancement/.*"
       }
     ]
   },
   "pack": {
-    "pack_format": 10,
-    "description": "Zeronia Datapack Template"
+    "pack_format": 48,
+    "description": "Made by Zeronia"
   }
 }
