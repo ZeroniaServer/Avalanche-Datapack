@@ -51,9 +51,16 @@ team add Lobby
 team add Spectator
 team add Green
 team add Red
+team add noCol
 
 team modify Lobby color blue
 team modify Spectator color dark_blue
 
 team modify Green color green
 team modify Red color red
+
+team modify noCol collisionRule never
+
+#> Sleigh + WASD (thanks Cloud Wolf!)
+function weapons:sleigh/init
+function wasd:init

@@ -1,0 +1,112 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ghast_spawn_egg",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:entity_data": {
+                                    "id": "minecraft:marker",
+                                    "Tags": [
+                                        "SpawnRedSleigh",
+                                        "SpawnSleigh"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Red"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ghast_spawn_egg",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:entity_data": {
+                                    "id": "minecraft:marker",
+                                    "Tags": [
+                                        "SpawnGreenSleigh",
+                                        "SpawnSleigh"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Green"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "function": "minecraft:set_count",
+            "count": 1
+        },
+        {
+            "function": "minecraft:set_components",
+            "components": {
+                "minecraft:can_place_on": {
+                    "predicates": [
+                        {
+                            "blocks": "#weapons:placeable"
+                        }
+                    ],
+                    "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 1,
+                "minecraft:hide_additional_tooltip": {},
+                "minecraft:custom_data": {
+                    "NoDrop": 1
+                }
+            }
+        },
+        {
+            "function": "minecraft:set_name",
+            "entity": "this",
+            "name": {
+                "translate": "powerup.sleigh.name",
+                "color": "#04F5FF",
+                "underlined": true,
+                "italic": false
+            }
+        },
+        {
+            "function": "minecraft:set_lore",
+            "entity": "this",
+            "lore": [
+                {"translate":"powerup.sleigh.lore1","italic":false,"color":"dark_aqua"},
+                {"translate":"powerup.sleigh.lore2","italic":false,"color":"dark_aqua"},
+                {"text":"","italic":false,"color":"dark_aqua"},
+                {"translate":"powerup.sleigh.lore3","italic":false,"color":"dark_aqua"},
+                {"translate":"powerup.sleigh.lore4","italic":false,"color":"dark_aqua"},
+                {"translate":"powerup.sleigh.lore5","italic":false,"color":"dark_aqua"},
+                {"translate":"powerup.sleigh.lore6","italic":false,"color":"dark_aqua"},
+                {"translate":"powerup.sleigh.lore7","italic":false,"color":"dark_aqua"}
+            ],
+            "mode": "replace_all"
+        }
+    ]
+}
