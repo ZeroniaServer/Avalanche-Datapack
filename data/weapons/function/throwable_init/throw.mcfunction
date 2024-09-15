@@ -6,10 +6,10 @@ execute as @e[type=snowball] store success score @s CmdData on origin if entity 
 tag @e[type=snowball,scores={CmdData=1}] add owned
 
 #> Spawn arrows in snowballs
-execute summon arrow run function weapons:throwable_init/spawn_arrow
+execute as @e[type=snowball,tag=owned] summon arrow run function weapons:throwable_init/spawn_arrow
 
 #> Detect snowballs with arrows, add "type" to its passenger
-execute as @e[type=snowball,tag=owned,tag=!HasPassenger] on passengers on vehicle run function weapons:throwable_init/set_type
+execute as @e[type=snowball,tag=owned,tag=HasPassenger,tag=!HasType] on passengers on vehicle run function weapons:throwable_init/set_type
 
 #> Reset scores
 scoreboard players reset @s throwsb
