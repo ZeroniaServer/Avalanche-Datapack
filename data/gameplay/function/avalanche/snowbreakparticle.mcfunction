@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=1..20}] at @s run particle block{block_state:"minecraft:snow"} ~ ~ ~ 1 0.5 1 0.05 6 force
