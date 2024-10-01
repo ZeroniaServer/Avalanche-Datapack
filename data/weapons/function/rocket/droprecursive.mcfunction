@@ -1,0 +1,1 @@
+execute if entity @s[team=Green] at @s run summon item ~ ~ ~ {Tags:["RocketItemRed","RocketItem"],PickupDelay:100000,Age:-32768,Item:{id:"minecraft:snowball"}}

@@ -1,0 +1,1 @@
+$playsound snowballhit master @a ~ ~ ~ 0.6 1.$(pitch)
