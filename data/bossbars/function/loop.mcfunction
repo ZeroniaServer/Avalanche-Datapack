@@ -30,3 +30,6 @@ execute store result bossbar bar_r_red value run scoreboard players get $bar_r_r
 
 #> Move the firework icon
 function bossbars:get_firework_progress
+
+#> Apply damage
+function bossbars:apply_damage
