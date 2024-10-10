@@ -2,7 +2,7 @@
 #TODO there's more performance efficient ways to get cached UUID without serializing all player NBT but this is fine for now
 data modify storage avalanche:snowball UUID set from entity @s UUID
 tag @s add self
-execute as @e[type=snowball] store success score @s CmdData on origin if entity @s[tag=self]
+execute as @e[type=snowball,tag=!HasType] store success score @s CmdData on origin if entity @s[tag=self]
 tag @e[type=snowball,scores={CmdData=1}] add owned
 
 #> Spawn arrows in snowballs
