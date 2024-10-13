@@ -5,5 +5,8 @@ execute as @e[type=arrow,tag=Iceball] at @s run function weapons:iceball/trail
 #> Sleigh
 function weapons:sleigh/main
 
-#> Sleigh
+#> Rockets
 function weapons:rocket/main
+
+#> Snowman
+function weapons:snowman/main

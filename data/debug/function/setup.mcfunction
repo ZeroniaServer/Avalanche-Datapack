@@ -68,3 +68,7 @@ team modify noCol collisionRule never
 #> Sleigh + WASD (thanks Cloud Wolf!)
 function weapons:sleigh/init
 function wasd:init
+
+#> AJ Init
+function animated_java:global/on_load
+function animated_java:global/internal/gu/load

@@ -1,0 +1,1 @@
+function weapons:snowman/spawn
