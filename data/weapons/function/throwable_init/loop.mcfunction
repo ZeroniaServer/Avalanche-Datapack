@@ -6,3 +6,6 @@ execute as @e[type=arrow,tag=ThrowableArrow] run function weapons:throwable_init
 
 #> Impact effects
 function weapons:throwable_init/impact
+
+#> Airtoggle
+execute as @e[type=arrow,tag=AirToggle] run function weapons:throwable_init/airtoggle
