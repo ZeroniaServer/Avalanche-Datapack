@@ -1,8 +1,7 @@
-execute as @e[type=marker,tag=SnowmanSpawner,tag=Red] at @s facing entity @p eyes rotated ~ 0 run function animated_java:snowman/summon/red
-execute as @e[type=marker,tag=SnowmanSpawner,tag=Green] at @s facing entity @p eyes rotated ~ 0 run function animated_java:snowman/summon/green
+execute as @e[type=marker,tag=SnowmanSpawner,tag=Red] at @s facing entity @p eyes rotated ~ 0 run function animated_java:snowman/summon/red with storage snowman:team
+execute as @e[type=marker,tag=SnowmanSpawner,tag=Green] at @s facing entity @p eyes rotated ~ 0 run function animated_java:snowman/summon/green with storage snowman:team
 kill @e[type=marker,tag=SnowmanSpawner]
 
-scoreboard players add @e[type=item_display,tag=aj.snowman.root] CmdData 1
 execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=1}] at @s run playsound block.snow.place master @a ~ ~ ~ 1 0
 execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=1}] at @s run playsound block.snow.place master @a ~ ~ ~ 1 1
 execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=1}] at @s run playsound block.wool.place master @a ~ ~ ~ 1 2
@@ -21,3 +20,9 @@ execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=25..28}] at 
 execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=18}] at @s run playsound minecraft:block.snow.hit master @a ~ ~ ~ 1 0.8
 execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=20}] at @s run playsound minecraft:block.powder_snow.fall master @a ~ ~ ~ 1 1.2
 execute as @e[type=item_display,tag=aj.snowman.root,scores={CmdData=22}] at @s run playsound minecraft:block.powder_snow.fall master @a ~ ~ ~ 1 1.4
+execute as @e[type=item_display,tag=aj.snowman.root,tag=!Spawned,tag=!Dying,scores={CmdData=40..}] at @s run function weapons:snowman/play_random_idle
+execute as @e[type=item_display,tag=aj.snowman.root,tag=!Spawned,tag=!Dying,scores={CmdData=40..}] at @s run scoreboard players set @s CmdData 50
+execute as @e[type=item_display,tag=aj.snowman.root,tag=!Spawned,tag=!Dying,scores={CmdData=40..}] run data merge entity @s {teleport_duration:10}
+execute as @e[type=item_display,tag=aj.snowman.root,tag=!Spawned,tag=!Dying,scores={CmdData=40..}] on passengers run data merge entity @s {teleport_duration:10}
+execute as @e[type=item_display,tag=aj.snowman.root,tag=!Spawned,tag=!Dying,scores={CmdData=40..}] at @s run scoreboard players set @s playerHP 900
+execute as @e[type=item_display,tag=aj.snowman.root,tag=!Spawned,tag=!Dying,scores={CmdData=40..}] at @s run tag @s add Spawned

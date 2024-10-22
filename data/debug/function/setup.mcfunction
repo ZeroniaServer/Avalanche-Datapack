@@ -4,6 +4,12 @@ scoreboard objectives add throwsb minecraft.used:minecraft.snowball
 scoreboard objectives add playerHP dummy
 scoreboard objectives add knocktime dummy
 scoreboard objectives add lifetime dummy
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
+scoreboard objectives add dx dummy
+scoreboard objectives add dy dummy
+scoreboard objectives add dz dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

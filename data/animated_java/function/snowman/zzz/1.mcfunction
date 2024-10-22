@@ -19,6 +19,8 @@ execute on vehicle on passengers if entity @s[tag=aj.snowman.bone.bottom] run fu
 data modify entity @s data.bones.bone_bottom set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.snowman.bone.snowball] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_snowball set from storage aj:uuid main.out
+execute on vehicle on passengers if entity @s[tag=aj.snowman.bone.snowball2] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
+data modify entity @s data.bones.bone_snowball2 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.snowman.bone.leftarm] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_leftarm set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.snowman.bone.rightarm] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
