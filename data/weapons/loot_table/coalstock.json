@@ -12,19 +12,20 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.iceball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:custom_name": "[{\"translate\":\"powerup.coalstock.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                         "minecraft:lore": [
-                            "{\"translate\":\"powerup.iceball.lore1\",\"italic\":false,\"color\":\"white\"}",
-                            "{\"translate\":\"powerup.iceball.lore2\",\"italic\":false,\"color\":\"white\"}"
+                            "{\"translate\":\"powerup.coalstock.lore1\",\"italic\":false,\"color\":\"white\"}",
+                            "{\"translate\":\"powerup.coalstock.lore2\",\"italic\":false,\"color\":\"white\"}",
+                            "{\"translate\":\"powerup.coalstock.lore3\",\"italic\":false,\"color\":\"white\"}"
                         ],
-                        "minecraft:custom_model_data": 2,
+                        "minecraft:custom_model_data": 5,
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],
                             "show_in_tooltip": false
                         },
                         "minecraft:use_cooldown": {
-                            "seconds": 2,
-                            "cooldown_group": "iceball"
+                            "seconds": 1,
+                            "cooldown_group": "coalstock"
                         }
                     }
                 }

@@ -2,14 +2,20 @@
   "values": [
     "minecraft:snow_block",
     "minecraft:ice",
+    "minecraft:blue_ice",
     "minecraft:packed_ice",
     "minecraft:light_blue_stained_glass",
-    "minecraft:blue_stained_glass",
-    "minecraft:blue_stained_glass_pane",
-    "minecraft:cyan_stained_glass",
-    "minecraft:cyan_stained_glass_pane",
-    "minecraft:end_rod",
-    "minecraft:target",
-    "minecraft:snow"
+    "minecraft:snow",
+    "minecraft:green_concrete_powder",
+    "minecraft:green_terracotta",
+    "minecraft:green_glazed_terracotta",
+    "minecraft:red_concrete_powder",
+    "minecraft:red_terracotta",
+    "minecraft:red_glazed_terracotta",
+    "minecraft:calcite",
+    "minecraft:diorite",
+    "minecraft:diorite_stairs",
+    "minecraft:light_blue_concrete",
+    "minecraft:stone"
   ]
 }

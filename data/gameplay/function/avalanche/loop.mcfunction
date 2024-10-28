@@ -3,13 +3,13 @@ scoreboard players add @e[type=marker,tag=AvalancheEntity,tag=SnowEmitter] CmdDa
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SnowBlockDisplay] CmdData 1
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SecondarySnowBlockDisplay] CmdData 1
 
-execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=10}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-60.0f,0.0f]}
-execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=10}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-45.0f,0.0f]}
-execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=10}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-30.0f,0.0f]}
+execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~-5 ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-60.0f,0.0f]}
+execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~ ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-45.0f,0.0f]}
+execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~5 ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-30.0f,0.0f]}
 
-execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=10}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[90.0f,0.0f]}
-execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=10}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[105.0f,0.0f]}
-execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=10}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[120.0f,0.0f]}
+execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=5}] at @s run summon marker ~5 ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[90.0f,0.0f]}
+execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=5}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[105.0f,0.0f]}
+execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=5}] at @s run summon marker ~-5 ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[120.0f,0.0f]}
 
 
 execute as @e[type=block_display,tag=SnowBlockDisplay,tag=New] at @s run function gameplay:avalanche/blockdisplay with storage avalanche:snow

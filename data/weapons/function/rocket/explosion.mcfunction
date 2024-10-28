@@ -26,6 +26,9 @@ execute if entity @s[tag=RocketGreen] run scoreboard players operation $DamageRe
 scoreboard players reset $DamageCalcG CmdData
 scoreboard players reset $DamageCalcR CmdData
 
+#> Destroy nearby Snowman
+scoreboard players set @e[type=item_display,tag=Snowman,distance=..4] playerHP 0
+
 execute as @s on vehicle run kill @s
 execute as @s on passengers run kill @s
 kill @s
