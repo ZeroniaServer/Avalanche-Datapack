@@ -12,14 +12,12 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:enchantments": {
-                            "levels": {
-                                "minecraft:vanishing_curse": 1
-                            },
-                            "show_in_tooltip": false
-                        },
                         "minecraft:custom_name": "[{\"translate\":\"item.snowball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-                        "minecraft:custom_model_data": 1
+                        "minecraft:custom_model_data": 1,
+                        "minecraft:use_cooldown": {
+                            "seconds": 0.2,
+                            "cooldown_group": "snowball"
+                        }
                     }
                 }
             ]
