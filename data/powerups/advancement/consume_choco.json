@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:diamond_hoe"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "powerups:hotchoco/consume"
+    }
+  }

@@ -68,10 +68,11 @@
                             },
                             "show_in_tooltip": false
                         },
-                        "minecraft:custom_name": "[{\"translate\":\"item.rocket.name\",\"italic\":false,\"color\":\"gold\"}]",
+                        "minecraft:custom_name": "[{\"translate\":\"powerup.rocket.name\",\"italic\":false,\"color\":\"gold\"}]",
                         "minecraft:lore": [
-                            "{\"translate\":\"item.rocket.lore1\",\"italic\":false,\"color\":\"white\"}",
-                            "{\"translate\":\"item.rocket.lore2\",\"italic\":false,\"color\":\"white\"}"
+                            "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]",
+                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
+                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]"
                         ],
                         "minecraft:custom_model_data": 4,
                         "minecraft:enchantment_glint_override": false,

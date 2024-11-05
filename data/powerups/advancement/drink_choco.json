@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:diamond_hoe",
+            "predicates": {
+              "minecraft:custom_data": {"HotChoco":"1b"}
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "powerups:hotchoco/drinking"
+    }
+  }
+  
