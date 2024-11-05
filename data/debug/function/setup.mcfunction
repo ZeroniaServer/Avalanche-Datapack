@@ -77,7 +77,7 @@ team modify Red color red
 team modify noCol collisionRule never
 
 #> Sleigh + WASD (thanks Cloud Wolf!)
-function weapons:sleigh/init
+function powerups:sleigh/init
 function wasd:init
 
 #> AJ Init

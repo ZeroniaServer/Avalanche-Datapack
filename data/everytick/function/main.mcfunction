@@ -2,7 +2,7 @@
 function bossbars:loop
 
 #> Weapons
-function weapons:loop
+function powerups:loop
 
 #> Player logic
 function player:health
