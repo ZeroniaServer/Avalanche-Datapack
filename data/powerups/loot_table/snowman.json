@@ -21,9 +21,13 @@
             {
             "function": "minecraft:set_components",
             "components": {
-                "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\"}",
-                "minecraft:lore": ["{\"translate\": \"powerup.snowman.lore1\"}","{\"translate\": \"powerup.snowman.lore2\"}","{\"translate\": \"powerup.snowman.lore3\"}"],
+                "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
+                "minecraft:lore": [
+                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                    "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                ],
                 "minecraft:custom_model_data": 2,
+                "minecraft:hide_additional_tooltip": {},
                 "minecraft:entity_data": {
                     "id": "minecraft:marker",
                     "Tags": [
@@ -39,7 +43,12 @@
                     "cooldown_group": "snowman"
                 },
                 "minecraft:can_place_on": {
-                  "blocks": "#powerups:placeable"
+                    "predicates": [
+                        {
+                            "blocks": "#powerups:placeable"
+                        }
+                    ],
+                    "show_in_tooltip": false
                 }
                 }
             }
@@ -66,9 +75,13 @@
             {
             "function": "minecraft:set_components",
             "components": {
-                "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\"}",
-                "minecraft:lore": ["{\"translate\": \"powerup.snowman.lore1\"}","{\"translate\": \"powerup.snowman.lore2\"}","{\"translate\": \"powerup.snowman.lore3\"}"],
+                "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
+                "minecraft:lore": [
+                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                ],
                 "minecraft:custom_model_data": 3,
+                "minecraft:hide_additional_tooltip": {},
                 "minecraft:entity_data": {
                     "id": "minecraft:marker",
                     "Tags": [
@@ -84,10 +97,15 @@
                     "cooldown_group": "snowman"
                 },
                 "minecraft:can_place_on": {
-                  "blocks": "#powerups:placeable"
-                }
+                    "predicates": [
+                        {
+                            "blocks": "#powerups:placeable"
+                        }
+                    ],
+                    "show_in_tooltip": false
                 }
             }
+        }
         ]
         }
     ]

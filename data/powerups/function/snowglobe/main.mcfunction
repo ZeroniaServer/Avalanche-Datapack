@@ -90,6 +90,8 @@ tag @a[scores={snowmark=200..}] remove SnowMark
 tag @a[tag=Knockout,tag=SnowMark] remove SnowMark
 
 #> Speed up snowball throwing
+execute as @a[tag=InFriendlyCloud,predicate=powerups:snowball_normal_mainhand] run scoreboard players reset @s snowballcounter
+execute as @a[tag=InFriendlyCloud,predicate=powerups:snowball_normal_offhand] run scoreboard players reset @s snowballcounter
 execute as @a[tag=InFriendlyCloud,predicate=powerups:snowball_normal_mainhand] run item modify entity @s weapon.mainhand powerups:snowball_blizzard
 execute as @a[tag=InFriendlyCloud,predicate=powerups:snowball_normal_offhand] run item modify entity @s weapon.offhand powerups:snowball_blizzard
 execute as @a[tag=!InFriendlyCloud,predicate=powerups:snowball_blizzard_mainhand] run item modify entity @s weapon.mainhand powerups:snowball
