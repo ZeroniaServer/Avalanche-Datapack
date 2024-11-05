@@ -11,3 +11,6 @@ function weapons:rocket/main
 
 #> Snowman
 function weapons:snowman/main
+
+#> Snowglobe
+function weapons:snowglobe/main
