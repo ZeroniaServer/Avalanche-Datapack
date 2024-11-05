@@ -1,0 +1,4 @@
+$summon turtle ~ ~ ~ {Rotation:[$(rotX)f,0.0f],Silent:1b,Invulnerable:1b,NoAI:1b,Team:"noCol",PersistenceRequired:1b,Tags:["vehicle.base","vehicle","init"],Passengers:[{id:"minecraft:minecart",Rotation:[$(rotX)f,0.0f],CustomDisplayTile:1b,DisplayOffset:-5,Tags:["vehicle","init"],DisplayState:{Name:"minecraft:comparator",Properties:{facing:"east"}}}],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:movement_speed",base:0},{id:"minecraft:scale",base:0.75}]}
+scoreboard players add .counter vehicle.id 1
+scoreboard players operation @e[type=#powerups:sleigh,tag=vehicle,tag=init] vehicle.id = .counter vehicle.id
+tag @e[type=#powerups:sleigh,tag=init] remove init
