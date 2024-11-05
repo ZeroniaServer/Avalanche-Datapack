@@ -101,7 +101,7 @@ execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=10..265}] run
 #> Overall player effects
 scoreboard players reset @a[tag=!InEnemyCloud,scores={blizzardtime=1..}] blizzardtime
 scoreboard players add @a[tag=InEnemyCloud] blizzardtime 1
-execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run scoreboard players remove @s playerHP 3
+execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run scoreboard players add @s playerDamage 3
 execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run damage @s 1 starve
 execute as @a[tag=InEnemyCloud,scores={blizzardtime=10..}] run scoreboard players reset @s blizzardtime
 

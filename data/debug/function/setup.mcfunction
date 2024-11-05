@@ -2,6 +2,7 @@
 scoreboard objectives add CmdData dummy
 scoreboard objectives add throwsb minecraft.used:minecraft.snowball
 scoreboard objectives add playerHP dummy
+scoreboard objectives add playerDamage dummy
 scoreboard objectives add knocktime dummy
 scoreboard objectives add lifetime dummy
 scoreboard objectives add x dummy
