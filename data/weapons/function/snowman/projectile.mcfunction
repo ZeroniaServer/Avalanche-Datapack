@@ -1,6 +1,7 @@
 data merge entity @s {PierceLevel:10,Silent:1b,damage:0.0001d,NoGravity:1b}
 tag @s add AirToggle
 tag @s add Snowball
+function entityid:assign_tag
 execute at @s if entity @e[type=item_display,tag=Snowman,tag=Red,limit=1,sort=nearest,distance=..2] run tp @s ~ ~ ~ facing entity @p[team=Green,tag=!Knockout] eyes
 execute at @s if entity @e[type=item_display,tag=Snowman,tag=Green,limit=1,sort=nearest,distance=..2] run tp @s ~ ~ ~ facing entity @p[team=Red,tag=!Knockout] eyes
 execute at @s run tp @s ^ ^0.6 ^1

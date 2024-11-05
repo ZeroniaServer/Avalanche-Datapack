@@ -10,6 +10,10 @@ scoreboard objectives add z dummy
 scoreboard objectives add dx dummy
 scoreboard objectives add dy dummy
 scoreboard objectives add dz dummy
+scoreboard objectives add team dummy
+scoreboard objectives add blizzardtime dummy
+scoreboard objectives add snowmark dummy
+scoreboard objectives add UUIDscore dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

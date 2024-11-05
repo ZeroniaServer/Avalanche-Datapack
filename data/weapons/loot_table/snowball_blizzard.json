@@ -15,7 +15,7 @@
                         "minecraft:custom_name": "[{\"translate\":\"item.snowball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                         "minecraft:custom_model_data": 1,
                         "minecraft:use_cooldown": {
-                            "seconds": 0.25,
+                            "seconds": 0.1,
                             "cooldown_group": "snowball"
                         }
                     }
