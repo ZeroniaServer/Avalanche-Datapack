@@ -1,8 +1,8 @@
 #> Regular damage
-execute if entity @s[tag=Iceball] run scoreboard players remove @a[tag=victim,tag=!Knockout] playerHP 20
-execute if entity @s[tag=Snowball] run scoreboard players remove @a[tag=victim,tag=!Knockout] playerHP 5
+execute if entity @s[tag=Iceball] run scoreboard players add @a[tag=victim,tag=!Knockout] playerDamage 20
+execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=!Knockout] playerDamage 5
 
 #> Snow Mark bonus damage
-execute if entity @s[tag=Snowball] run scoreboard players remove @a[tag=victim,tag=!Knockout] playerHP 2
+execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=!Knockout] playerDamage 2
 
 kill
