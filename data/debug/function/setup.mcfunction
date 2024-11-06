@@ -17,11 +17,14 @@ scoreboard objectives add snowmark dummy
 scoreboard objectives add UUIDscore dummy
 scoreboard objectives add snowballcharge dummy
 scoreboard objectives add snowballcounter dummy
+scoreboard objectives add healticks dummy
+scoreboard objectives add ambientfxplayer dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
 scoreboard players set $200 CmdData 200
 scoreboard players set $350 CmdData 350
+scoreboard players set $1000 CmdData 1000
 
 #> Entity ID
 scoreboard objectives add entityid dummy

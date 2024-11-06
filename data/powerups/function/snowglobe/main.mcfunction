@@ -65,6 +65,10 @@ execute as @e[type=item_display,tag=StormCloudMain,tag=Red,scores={CmdData=1..26
 execute as @e[type=item_display,tag=StormCloudMain,tag=Green,scores={CmdData=1..260}] at @s positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Green,tag=!Dying,dx=4,dy=4,dz=4,scores={playerHP=1..900}] playerHP 900
 execute as @e[type=item_display,tag=StormCloudMain,tag=Red,scores={CmdData=1..260}] at @s positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Red,tag=!Dying,dx=4,dy=4,dz=4,scores={playerHP=1..900}] playerHP 900
 
+#> Extinguish enemy campfires
+execute as @e[type=item_display,tag=StormCloudMain,tag=Red,scores={CmdData=1..260}] at @s positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Green,dx=4,dy=4,dz=4] CmdData 5
+execute as @e[type=item_display,tag=StormCloudMain,tag=Green,scores={CmdData=1..260}] at @s positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Red,dx=4,dy=4,dz=4] CmdData 5
+
 #> Snow-Mark nearby players
 scoreboard players add @a[tag=SnowMark] snowmark 1
 execute as @e[type=item_display,tag=StormCloudMain,tag=Red,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Green,tag=!Knockout,dx=6,dy=6,dz=6] add SnowMark

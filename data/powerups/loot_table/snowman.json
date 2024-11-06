@@ -24,7 +24,7 @@
                 "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
                 "minecraft:lore": [
                     "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                    "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
                 ],
                 "minecraft:custom_model_data": 2,
                 "minecraft:hide_additional_tooltip": {},
