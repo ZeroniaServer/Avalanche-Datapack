@@ -22,3 +22,6 @@ function powerups:snowglobe/main
 
 #> Hot Chocolate
 function powerups:hotchoco/main
+
+#> Campfire
+function powerups:campfire/main
