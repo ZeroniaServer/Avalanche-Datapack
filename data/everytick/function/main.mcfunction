@@ -18,6 +18,8 @@ execute if score #loaded entityid matches 1 run function entityid:real_tick
 execute as @a unless score @s UUIDscore matches -2147483648..2147483647 store result score @s UUIDscore run data get entity @s UUID[0]
 
 #> Effects
+effect give @a[predicate=!powerups:hold_icicle] weakness infinite 100 true
+effect clear @a[predicate=powerups:hold_icicle] weakness
 effect give @a saturation infinite 100 true
 effect give @a night_vision infinite 100 true
 effect give @a instant_health infinite 100 true

@@ -19,6 +19,7 @@ scoreboard objectives add snowballcharge dummy
 scoreboard objectives add snowballcounter dummy
 scoreboard objectives add healticks dummy
 scoreboard objectives add ambientfxplayer dummy
+scoreboard objectives add breakicicle minecraft.broken:minecraft.diamond_hoe
 
 #> Static scores
 scoreboard players set $100 CmdData 100

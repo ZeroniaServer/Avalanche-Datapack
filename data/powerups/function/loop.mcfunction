@@ -25,3 +25,6 @@ function powerups:hotchoco/main
 
 #> Campfire
 function powerups:campfire/main
+
+#> Icicle
+function powerups:icicle/main
