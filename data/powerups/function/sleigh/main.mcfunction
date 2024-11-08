@@ -1,5 +1,3 @@
-execute unless entity @e[type=marker,tag=vehicle] run summon marker ~ ~ ~ {Tags:["vehicle"]}
-
 #TODO add special placement for red/green?
 execute as @e[type=marker,tag=SpawnSleigh] at @s run function powerups:sleigh/place
 
