@@ -7,6 +7,7 @@ $execute positioned ^ ^ ^-.1875 run summon item_display ~ ~0.4171875 ~ {teleport
 ride @e[type=minecart,tag=init,limit=1] mount @e[type=turtle,tag=init,limit=1]
 ride @e[type=item_display,tag=init,limit=1] mount @e[type=turtle,tag=init,limit=1]
 
-tag @e[type=turtle,tag=init] remove init
-tag @e[type=minecart,tag=init] remove init
-tag @e[type=item_display,tag=init] remove init
+scoreboard players add .counter vehicle.id 1
+scoreboard players operation @e[type=#powerups:sleigh,tag=vehicle,tag=init] vehicle.id = .counter vehicle.id
+
+tag @e[type=#powerups:sleigh,tag=init] remove init

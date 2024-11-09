@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:turtle",
-    "minecraft:minecart"
+    "minecraft:minecart",
+    "minecraft:item_display"
   ]
 }
