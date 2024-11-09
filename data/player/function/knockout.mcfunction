@@ -1,3 +1,4 @@
+execute as @a[tag=!Knockout,scores={playerHP=..0}] run ride @s dismount
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
 item replace entity @a[tag=!Knockout,scores={knocktime=1..}] armor.head with air
