@@ -29,6 +29,18 @@ scoreboard players reset $DamageCalcR CmdData
 #> Destroy nearby Snowman
 scoreboard players set @e[type=item_display,tag=Snowman,distance=..4] playerHP 0
 
+#> Destroy nearby Sleighs
+execute as @e[type=turtle,distance=..4] at @s run function powerups:sleigh/break
+
+#> Blast nearby players backward
+scoreboard players set $blast CmdData 0
+execute if entity @a[gamemode=!spectator,distance=..5] run scoreboard players set $blast CmdData 1
+execute if score $blast CmdData matches 1 run function powerups:rocket/blast/summonslime
+
+#> Summon AECs + tag players as Blasted
+execute as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:{type:"block",block_state:"minecraft:air"},Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,potion_contents:{custom_effects:[{id:"minecraft:levitation",amplifier:50,duration:2,show_particles:0b}]}}
+tag @a[tag=!Blasted,gamemode=!spectator,distance=..5] add Blasted
+
 execute as @s on vehicle run kill @s
 execute as @s on passengers run kill @s
 kill @s
