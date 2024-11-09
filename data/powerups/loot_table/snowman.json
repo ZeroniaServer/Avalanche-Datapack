@@ -9,50 +9,51 @@
                 }
             ],
             "conditions": [
-        {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "team": "Red"
-          }
-        }
-      ],
-            "functions": [
-            {
-            "function": "minecraft:set_components",
-            "components": {
-                "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
-                "minecraft:lore": [
-                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
-                ],
-                "minecraft:custom_model_data": 2,
-                "minecraft:hide_additional_tooltip": {},
-                "minecraft:entity_data": {
-                    "id": "minecraft:marker",
-                    "Tags": [
-                        "SnowmanSpawner",
-                        "Red"
-                    ],
-                    "data": {
-                        "durability": 5
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Red"
                     }
-                },
-                "minecraft:use_cooldown": {
-                    "seconds": 10,
-                    "cooldown_group": "snowman"
-                },
-                "minecraft:can_place_on": {
-                    "predicates": [
-                        {
-                            "blocks": "#powerups:placeable"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
+                        "minecraft:lore": [
+                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                        ],
+                        "minecraft:custom_model_data": 2,
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:hide_additional_tooltip": {},
+                        "minecraft:entity_data": {
+                            "id": "minecraft:marker",
+                            "Tags": [
+                                "SnowmanSpawner",
+                                "Red"
+                            ],
+                            "data": {
+                                "durability": 5
+                            }
+                        },
+                        "minecraft:use_cooldown": {
+                            "seconds": 10,
+                            "cooldown_group": "snowman"
+                        },
+                        "minecraft:can_place_on": {
+                            "predicates": [
+                                {
+                                    "blocks": "#powerups:placeable"
+                                }
+                            ],
+                            "show_in_tooltip": false
                         }
-                    ],
-                    "show_in_tooltip": false
+                    }
                 }
-                }
-            }
-        ]
+            ]
         },
         {
             "rolls": 1,
@@ -63,50 +64,50 @@
                 }
             ],
             "conditions": [
-        {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "team": "Green"
-          }
-        }
-      ],
-            "functions": [
-            {
-            "function": "minecraft:set_components",
-            "components": {
-                "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
-                "minecraft:lore": [
-                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
-                ],
-                "minecraft:custom_model_data": 3,
-                "minecraft:hide_additional_tooltip": {},
-                "minecraft:entity_data": {
-                    "id": "minecraft:marker",
-                    "Tags": [
-                        "SnowmanSpawner",
-                        "Green"
-                    ],
-                    "data": {
-                        "durability": 5
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Green"
                     }
-                },
-                "minecraft:use_cooldown": {
-                    "seconds": 10,
-                    "cooldown_group": "snowman"
-                },
-                "minecraft:can_place_on": {
-                    "predicates": [
-                        {
-                            "blocks": "#powerups:placeable"
-                        }
-                    ],
-                    "show_in_tooltip": false
                 }
-            }
-        }
-        ]
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:item_name": "{\"translate\": \"powerup.snowman.name\",\"color\":\"dark_aqua\"}",
+                        "minecraft:lore": [
+                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                        ],
+                        "minecraft:custom_model_data": 3,
+                        "minecraft:hide_additional_tooltip": {},
+                        "minecraft:entity_data": {
+                            "id": "minecraft:marker",
+                            "Tags": [
+                                "SnowmanSpawner",
+                                "Green"
+                            ],
+                            "data": {
+                                "durability": 5
+                            }
+                        },
+                        "minecraft:use_cooldown": {
+                            "seconds": 10,
+                            "cooldown_group": "snowman"
+                        },
+                        "minecraft:can_place_on": {
+                            "predicates": [
+                                {
+                                    "blocks": "#powerups:placeable"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        }
+                    }
+                }
+            ]
         }
     ]
 }

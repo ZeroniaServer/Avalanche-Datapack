@@ -18,6 +18,7 @@
                             "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]"
                         ],
                         "minecraft:custom_model_data": 5,
+                        "minecraft:custom_data": "{NoDrop:1b}",
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],
                             "show_in_tooltip": false

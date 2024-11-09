@@ -18,6 +18,7 @@
                             "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
                         ],
                         "minecraft:custom_model_data": 1,
+                        "minecraft:custom_data": "{NoDrop:1b}",
                         "minecraft:use_cooldown": {
                             "seconds": 0.1,
                             "cooldown_group": "snowball"
