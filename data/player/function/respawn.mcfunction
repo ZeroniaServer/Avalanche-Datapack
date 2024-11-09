@@ -1,5 +1,5 @@
 scoreboard players set @s playerHP 20
-scoreboard players set @s playerDamage 20
+scoreboard players reset @s playerDamage
 execute as @s at @s run tp @s @s
 tp @s[team=Green] -120 45 -198 -90 0
 tp @s[team=Red] -7 45 -230 90 0
