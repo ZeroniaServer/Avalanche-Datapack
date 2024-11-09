@@ -6,7 +6,7 @@
           "item": {
             "items": "minecraft:diamond_hoe",
             "predicates": {
-              "minecraft:custom_data": {"HotChoco":"1b"}
+              "minecraft:custom_data": {"HotChoco":1}
             }
           }
         }

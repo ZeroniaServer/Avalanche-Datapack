@@ -1,13 +1,13 @@
 #> Keep track of thrown snowballs
-execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.mainhand snowball[minecraft:custom_data={Remainder:"1b"}] run scoreboard players add @s snowballcounter 1
-execute as @a[tag=!Knockout,tag=!InFriendlyCloud,team=!Lobby,team=!Spectator,scores={snowballcounter=4..}] if items entity @s weapon.mainhand snowball[minecraft:custom_data={Remainder:"1b"}] run item modify entity @s weapon.mainhand powerups:slow_reload
-execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.mainhand snowball[minecraft:custom_data={Remainder:"1b"}] run item modify entity @s weapon.mainhand powerups:reload
-execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] unless score @s snowballcounter matches 1.. if items entity @s weapon.mainhand snowball[minecraft:custom_data={Slow:"1b"}] run item modify entity @s weapon.mainhand powerups:reload
+execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.mainhand snowball[minecraft:custom_data~{Remainder:1b}] run scoreboard players add @s snowballcounter 1
+execute as @a[tag=!Knockout,tag=!InFriendlyCloud,team=!Lobby,team=!Spectator,scores={snowballcounter=4..}] if items entity @s weapon.mainhand snowball[minecraft:custom_data~{Remainder:1b}] run item modify entity @s weapon.mainhand powerups:slow_reload
+execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.mainhand snowball[minecraft:custom_data~{Remainder:1b}] run item modify entity @s weapon.mainhand powerups:reload
+execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] unless score @s snowballcounter matches 1.. if items entity @s weapon.mainhand snowball[minecraft:custom_data~{Slow:1b}] run item modify entity @s weapon.mainhand powerups:reload
 
-execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.offhand snowball[minecraft:custom_data={Remainder:"1b"}] run scoreboard players add @s snowballcounter 1
-execute as @a[tag=!Knockout,tag=!InFriendlyCloud,team=!Lobby,team=!Spectator,scores={snowballcounter=4..}] if items entity @s weapon.offhand snowball[minecraft:custom_data={Remainder:"1b"}] run item modify entity @s weapon.offhand powerups:slow_reload
-execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.offhand snowball[minecraft:custom_data={Remainder:"1b"}] run item modify entity @s weapon.offhand powerups:reload
-execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] unless score @s snowballcounter matches 1.. if items entity @s weapon.offhand snowball[minecraft:custom_data={Slow:"1b"}] run item modify entity @s weapon.offhand powerups:reload
+execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.offhand snowball[minecraft:custom_data~{Remainder:1b}] run scoreboard players add @s snowballcounter 1
+execute as @a[tag=!Knockout,tag=!InFriendlyCloud,team=!Lobby,team=!Spectator,scores={snowballcounter=4..}] if items entity @s weapon.offhand snowball[minecraft:custom_data~{Remainder:1b}] run item modify entity @s weapon.offhand powerups:slow_reload
+execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] if items entity @s weapon.offhand snowball[minecraft:custom_data~{Remainder:1b}] run item modify entity @s weapon.offhand powerups:reload
+execute as @a[tag=!Knockout,team=!Lobby,team=!Spectator] unless score @s snowballcounter matches 1.. if items entity @s weapon.offhand snowball[minecraft:custom_data~{Slow:1b}] run item modify entity @s weapon.offhand powerups:reload
 
 
 #> Add a delay if player spams snowballs
