@@ -93,3 +93,7 @@ function wasd:init
 #> AJ Init
 function animated_java:global/on_load
 function animated_java:global/internal/gu/load
+
+#> Lobby worldspawn
+setworldspawn -63 52 -95
+spawnpoint @a -63 52 -95

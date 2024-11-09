@@ -1,4 +1,5 @@
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run ride @s dismount
+scoreboard players set @a[tag=!Knockout,scores={playerHP=..-1}] playerHP 0
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
 item replace entity @a[tag=!Knockout,scores={knocktime=1..}] armor.head with air
@@ -17,11 +18,14 @@ execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle block{block_
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle minecraft:snowflake ~ ~1.5 ~ 0.1 0.1 0.1 0.1 7
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run item replace entity @s armor.head with snow_block[minecraft:equippable={slot:head,camera_overlay:"misc/powder_snow_outline"},enchantment_glint_override=false,enchantments={levels:{binding_curse:1}}]
 
-execute as @a[tag=Knockout,scores={knocktime=40}] run damage @s 1 starve
-execute as @a[tag=Knockout,scores={knocktime=40}] at @s run playsound entity.player.hurt_freeze master @a ~ ~ ~ 0.6 1
+execute as @a[tag=Knockout,scores={knocktime=40}] run damage @s 1 freeze
 execute as @a[tag=Knockout,scores={knocktime=40}] at @s run scoreboard players remove @s playerHP 1
 execute as @a[tag=Knockout,scores={knocktime=42}] at @s run scoreboard players remove @s playerHP 1
 execute as @a[tag=Knockout,scores={knocktime=44}] at @s run scoreboard players remove @s playerHP 1
-execute as @a[tag=Knockout,scores={knocktime=55}] at @s run scoreboard players set @s knocktime 39
+execute as @a[tag=Knockout,scores={knocktime=47,playerHP=-9}] at @s run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 2
+execute as @a[tag=Knockout,scores={knocktime=50,playerHP=-12}] at @s run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 2
+execute as @a[tag=Knockout,scores={knocktime=53,playerHP=-15}] at @s run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 1
+execute as @a[tag=Knockout,scores={knocktime=55..}] at @s run scoreboard players set @s knocktime 39
 
-execute as @a[tag=Knockout,scores={playerHP=..-20}] run function player:respawn
+execute as @a[tag=Knockout,scores={playerHP=..-20,knocktime=45}] run function player:respawn
+execute as @a[tag=Knockout,scores={playerHP=..-20},tag=!Knockout] run function player:respawn
