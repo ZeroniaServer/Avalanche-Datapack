@@ -12,7 +12,7 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.snowball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:custom_name": "[{\"translate\":\"item.minecraft.snowball\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                         "minecraft:lore": [
                             "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
                             "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
@@ -30,7 +30,7 @@
                                     "Remainder": "1b",
                                     "NoDrop": "1b"
                                 },
-                                "minecraft:custom_name": "[{\"translate\":\"powerup.snowball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                                "minecraft:custom_name": "[{\"translate\":\"item.minecraft.snowball\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                                 "minecraft:lore": [
                                     "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
                                     "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"

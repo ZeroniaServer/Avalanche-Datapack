@@ -78,33 +78,14 @@
                 },
                 "minecraft:custom_model_data": 1,
                 "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": "{NoDrop:1b}"
+                "minecraft:custom_data": "{NoDrop:1b}",
+                "minecraft:custom_name": "[{\"translate\":\"powerup.sleigh.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                "minecraft:lore": [
+                    "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
+                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                    "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
+                ]
             }
-        },
-        {
-            "function": "minecraft:set_name",
-            "entity": "this",
-            "name": {
-                "translate": "powerup.sleigh.name",
-                "color": "#04F5FF",
-                "underlined": true,
-                "italic": false
-            }
-        },
-        {
-            "function": "minecraft:set_lore",
-            "entity": "this",
-            "lore": [
-                {"translate":"powerup.sleigh.lore1","italic":false,"color":"dark_aqua"},
-                {"translate":"powerup.sleigh.lore2","italic":false,"color":"dark_aqua"},
-                {"text":"","italic":false,"color":"dark_aqua"},
-                {"translate":"powerup.sleigh.lore3","italic":false,"color":"dark_aqua"},
-                {"translate":"powerup.sleigh.lore4","italic":false,"color":"dark_aqua"},
-                {"translate":"powerup.sleigh.lore5","italic":false,"color":"dark_aqua"},
-                {"translate":"powerup.sleigh.lore6","italic":false,"color":"dark_aqua"},
-                {"translate":"powerup.sleigh.lore7","italic":false,"color":"dark_aqua"}
-            ],
-            "mode": "replace_all"
         }
     ]
 }
