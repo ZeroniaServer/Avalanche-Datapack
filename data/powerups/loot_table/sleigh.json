@@ -13,46 +13,9 @@
                                 "minecraft:entity_data": {
                                     "id": "minecraft:marker",
                                     "Tags": [
-                                        "SpawnRedSleigh",
                                         "SpawnSleigh"
                                     ]
                                 }
-                            }
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Red"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:ghast_spawn_egg",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:entity_data": {
-                                    "id": "minecraft:marker",
-                                    "Tags": [
-                                        "SpawnGreenSleigh",
-                                        "SpawnSleigh"
-                                    ]
-                                }
-                            }
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Green"
                             }
                         }
                     ]

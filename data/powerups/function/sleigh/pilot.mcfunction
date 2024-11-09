@@ -1,3 +1,5 @@
+execute at @s[tag=!SleighOffGround,predicate=!gameplay:in_air] on passengers on passengers if predicate wasd:jump on vehicle on vehicle run tag @s add SleighJumpBig
+
 execute at @s[tag=!SleighOffGround] unless predicate gameplay:on_ground if block ~ ~ ~ air if block ~ ~-1 ~ air if block ~ ~-2 ~ air if block ~ ~-3 ~ air if block ~ ~-4 ~ air if block ~ ~-5 ~ air run tag @s add SleighJumpBig
 
 execute at @s[tag=SleighJumpBig] run function powerups:sleigh/jumpbig

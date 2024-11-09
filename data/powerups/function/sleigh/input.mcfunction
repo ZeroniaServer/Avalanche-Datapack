@@ -5,7 +5,7 @@ scoreboard players operation #input math = .w wasd
 scoreboard players operation #input math += .a wasd
 scoreboard players operation #input math += .s wasd
 scoreboard players operation #input math += .d wasd
-
+execute if predicate wasd:jump run scoreboard players add #input math 1
 execute if score #input math matches 1.. unless score .s wasd matches 1 on vehicle on vehicle run function powerups:sleigh/accelerate
 execute if score #input math matches 1.. if score .s wasd matches 1 on vehicle on vehicle run function powerups:sleigh/brake
 
