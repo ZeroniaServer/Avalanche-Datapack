@@ -6,8 +6,8 @@
                 "id": "minecraft:snowball",
                 "components": {
                     "custom_data": {
-                        "Remainder": "1b",
-                        "NoDrop": "1b"
+                        "Remainder": 1,
+                        "NoDrop": 1
                     },
                     "minecraft:custom_name": "[{\"translate\":\"item.minecraft.snowball\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                     "minecraft:lore": [
@@ -24,7 +24,7 @@
             "custom_data": {
                 "Remainder": "0b",
                 "Slow": "0b",
-                "NoDrop": "1b"
+                "NoDrop": 1
             }
         }
     }

@@ -29,7 +29,7 @@
                             "sound": "entity.generic.drink",
                             "has_consume_particles": false
                         },
-                        "custom_data": {"HotChoco": "1b", "NoDrop": "1b"},
+                        "custom_data": {"HotChoco": 1, "NoDrop": 1},
                         "max_stack_size": 64,
                         "!max_damage": {},
                         "use_cooldown": {"seconds": 0.55, "cooldown_group": "hotchoco"}
