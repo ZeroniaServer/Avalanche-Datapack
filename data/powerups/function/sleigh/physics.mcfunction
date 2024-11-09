@@ -16,12 +16,11 @@ execute store result score p vehicle.dx run data get entity @s Pos[0] 100.0
 execute store result score p vehicle.dz run data get entity @s Pos[2] 100.0
 scoreboard players operation v vehicle.dx = @s vehicle.dx
 scoreboard players operation v vehicle.dz = @s vehicle.dz
-scoreboard players operation .current vehicle.id = @s vehicle.id
 scoreboard players set #bool math 0
 execute unless score v vehicle.dx matches 0 run scoreboard players add #bool math 1
 execute unless score v vehicle.dz matches 0 run scoreboard players add #bool math 1
 
-execute if score #bool math matches 1.. as @e[type=minecart,tag=vehicle] if score @s vehicle.id = .current vehicle.id at @s run function powerups:sleigh/rotate
+execute if score #bool math matches 1.. on passengers at @s[type=minecart] run function powerups:sleigh/rotate
 execute if score #bool math matches 1.. at @s[tag=!SleighOffGround] run function powerups:sleigh/effects
 
 execute if score #input math matches 1 run data merge entity @s[tag=!canmove] {NoAI:0b}
@@ -37,5 +36,3 @@ execute store result entity @s Motion[0] double 0.001 run scoreboard players get
 execute store result entity @s Motion[2] double 0.001 run scoreboard players get @s vehicle.dz
 
 function powerups:sleigh/pilot
-
-scoreboard players reset .current vehicle.id

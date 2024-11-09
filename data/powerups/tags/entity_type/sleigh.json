@@ -2,6 +2,7 @@
   "values": [
     "minecraft:turtle",
     "minecraft:minecart",
-    "minecraft:item_display"
+    "minecraft:item_display",
+    "minecraft:interaction"
   ]
 }
