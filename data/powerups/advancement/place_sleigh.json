@@ -30,5 +30,8 @@
                 ]
             }
         }
+    },
+    "rewards": {
+        "function": "powerups:sleigh/place"
     }
 }

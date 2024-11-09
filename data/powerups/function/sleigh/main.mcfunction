@@ -1,5 +1,4 @@
 #TODO add special placement for red/green?
-execute as @e[type=marker,tag=SpawnSleigh] at @s run function powerups:sleigh/place
 
 execute as @a if predicate wasd:on_sleigh at @s run function powerups:sleigh/input
 execute as @e[type=turtle,tag=vehicle] run function powerups:sleigh/physics
