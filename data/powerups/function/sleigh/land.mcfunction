@@ -6,3 +6,5 @@ particle block{block_state:"snow_block"} ~ ~1 ~ 1 1 1 0.1 100 force
 scoreboard players add @s CmdData 150
 tag @s remove SleighOffGround
 tag @s remove SleighJumpBig
+tag @s remove firstTick
+tag @s remove secondTick

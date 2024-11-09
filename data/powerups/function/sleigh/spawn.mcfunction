@@ -1,4 +1,4 @@
-$summon turtle ~ ~ ~ {Rotation:[$(rotX)f,0.0f],Silent:1b,Invulnerable:1b,NoAI:1b,Team:"noCol",PersistenceRequired:1b,Tags:["vehicle.base","vehicle","init"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:movement_speed",base:0},{id:"minecraft:scale",base:0.75}]}
+$summon turtle ~ ~ ~ {Rotation:[$(rotX)f,0.0f],Silent:1b,Invulnerable:1b,Team:"noCol",PersistenceRequired:1b,Tags:["vehicle.base","vehicle","init"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:movement_speed",base:0},{id:"minecraft:jump_strength",base:0},{id:"minecraft:scale",base:0.75}]}
 
 $execute positioned ^ ^ ^-.1875 run summon minecart ~ ~0.4171875 ~ {Rotation:[$(rotX)f,0.0f],Tags:["vehicle","init"]}
 

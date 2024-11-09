@@ -25,11 +25,10 @@ execute unless score v vehicle.dz matches 0 run scoreboard players add #bool mat
 execute if score #bool math matches 1.. on passengers at @s[type=minecart] run function powerups:sleigh/rotate
 execute if score #bool math matches 1.. at @s[tag=!SleighOffGround] run function powerups:sleigh/effects
 
-execute if score #input math matches 1 run data merge entity @s[tag=!canmove] {NoAI:0b}
-execute if score #input math matches 1 run tag @s add canmove
-
-execute unless entity @s[tag=SleighOffGround] if score #bool math matches 0 run data merge entity @s {NoAI:1b}
-execute unless entity @s[tag=SleighOffGround] if score #bool math matches 0 run tag @s remove canmove
+data merge entity @s {NoAI:1b}
+execute if score #input math matches 1 run data merge entity @s {NoAI:0b}
+execute unless score #bool math matches 0 run data merge entity @s {NoAI:0b}
+execute if entity @s[tag=SleighOffGround] run data merge entity @s {NoAI:0b}
 
 ########################
 
