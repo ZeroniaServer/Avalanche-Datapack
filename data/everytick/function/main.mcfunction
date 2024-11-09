@@ -25,5 +25,8 @@ effect give @a night_vision infinite 100 true
 effect give @a instant_health infinite 100 true
 effect give @a fire_resistance infinite 100 true
 
+#> No Drop
+execute as @e[type=item] at @s if items entity @s contents *[custom_data~{NoDrop:1b}] run function everytick:nodrop
+
 #> AJ tick
 function animated_java:global/on_tick

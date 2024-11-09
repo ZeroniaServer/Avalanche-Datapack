@@ -22,6 +22,7 @@
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
                         "minecraft:custom_model_data": 6,
+                        "minecraft:custom_data": "{NoDrop:1b}",
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],
                             "show_in_tooltip": false

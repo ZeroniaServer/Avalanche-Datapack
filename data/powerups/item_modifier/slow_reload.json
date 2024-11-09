@@ -1,29 +1,35 @@
 [
     {
-      "function": "minecraft:set_components",
-      "components": {
-        "minecraft:use_cooldown": {
-                            "seconds": 2.25,
-                            "cooldown_group": "snowball"
-                        },
-                        "minecraft:use_remainder": {
-                            "id": "minecraft:snowball",
-                            "components": {
-                                "custom_data": {"Remainder":"0b", "Slow":"1b"},
-                                "minecraft:custom_name": "[{\"translate\":\"powerup.snowball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-                                "minecraft:lore": [
-                                "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                                "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
-                        ],
-                        "minecraft:custom_model_data": 1,
-                        "minecraft:use_cooldown": {
-                            "seconds": 0.25,
-                            "cooldown_group": "snowball"
-                        }
-                            }
-                        },
-                        "custom_data": {"Remainder": "1b"}
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:use_cooldown": {
+                "seconds": 2.25,
+                "cooldown_group": "snowball"
+            },
+            "minecraft:use_remainder": {
+                "id": "minecraft:snowball",
+                "components": {
+                    "custom_data": {
+                        "Remainder": "0b",
+                        "Slow": "1b",
+                        "NoDrop": "1b"
+                    },
+                    "minecraft:custom_name": "[{\"translate\":\"powerup.snowball.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                    "minecraft:lore": [
+                        "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                        "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
+                    ],
+                    "minecraft:custom_model_data": 1,
+                    "minecraft:use_cooldown": {
+                        "seconds": 0.25,
+                        "cooldown_group": "snowball"
                     }
+                }
+            },
+            "custom_data": {
+                "Remainder": "1b",
+                "NoDrop": "1b"
+            }
+        }
     }
-  ]
-  
+]

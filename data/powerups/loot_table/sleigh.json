@@ -78,9 +78,7 @@
                 },
                 "minecraft:custom_model_data": 1,
                 "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": {
-                    "NoDrop": 1
-                }
+                "minecraft:custom_data": "{NoDrop:1b}"
             }
         },
         {

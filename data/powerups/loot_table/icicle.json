@@ -21,34 +21,35 @@
                             "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.icicle.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
                         ],
                         "minecraft:custom_model_data": 24,
+                        "minecraft:custom_data": "{NoDrop:1b}",
                         "max_damage": 6
                     }
                 },
                 {
                     "function": "minecraft:set_attributes",
                     "modifiers": [
-                {
-                  "id": "damage",
-                  "attribute": "minecraft:attack_damage",
-                  "amount": 1,
-                  "operation": "add_value",
-                  "slot": "mainhand"
-                },
-                {
-                  "id": "speed",
-                  "attribute": "minecraft:attack_speed",
-                  "amount": 20,
-                  "operation": "add_value",
-                  "slot": "mainhand"
-                },
-                {
-                  "id": "knockback",
-                  "attribute": "minecraft:attack_knockback",
-                  "amount": 0.4,
-                  "operation": "add_value",
-                  "slot": "mainhand"
-                }
-              ]
+                        {
+                            "id": "damage",
+                            "attribute": "minecraft:attack_damage",
+                            "amount": 1,
+                            "operation": "add_value",
+                            "slot": "mainhand"
+                        },
+                        {
+                            "id": "speed",
+                            "attribute": "minecraft:attack_speed",
+                            "amount": 20,
+                            "operation": "add_value",
+                            "slot": "mainhand"
+                        },
+                        {
+                            "id": "knockback",
+                            "attribute": "minecraft:attack_knockback",
+                            "amount": 0.4,
+                            "operation": "add_value",
+                            "slot": "mainhand"
+                        }
+                    ]
                 }
             ]
         }
