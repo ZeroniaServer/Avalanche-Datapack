@@ -20,6 +20,7 @@ scoreboard objectives add snowballcounter dummy
 scoreboard objectives add healticks dummy
 scoreboard objectives add ambientfxplayer dummy
 scoreboard objectives add breakicicle minecraft.broken:minecraft.diamond_hoe
+scoreboard objectives add blasttime dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
@@ -73,6 +74,7 @@ team add Spectator
 team add Green
 team add Red
 team add noCol
+team add Collide
 
 team modify Lobby color blue
 team modify Spectator color dark_blue
@@ -81,6 +83,8 @@ team modify Green color green
 team modify Red color red
 
 team modify noCol collisionRule never
+team modify Collide collisionRule pushOwnTeam
+
 
 #> Sleigh + WASD (thanks Cloud Wolf!)
 function powerups:sleigh/init
