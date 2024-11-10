@@ -1,1 +1,1 @@
-execute as @e[type=item_display,tag=barricade] at @s unless block ~ ~ ~ target[power=0] run function powerups:barricade/damage
+execute as @e[type=item_display,tag=barricade] at @s run function powerups:barricade/tick

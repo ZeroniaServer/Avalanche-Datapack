@@ -6,6 +6,3 @@ execute as @e[type=arrow,tag=ThrowableArrow] run function powerups:throwable_ini
 
 #> Impact effects
 function powerups:throwable_init/impact
-
-#> Airtoggle
-execute as @e[type=arrow,tag=AirToggle] run function powerups:throwable_init/airtoggle

@@ -1,11 +1,9 @@
-tag @e[type=arrow,tag=!Impact,nbt={inGround:1b}] add Impact
-execute as @e[type=arrow,tag=Snowball,tag=Impact] at @s run function powerups:snowball/impact
-execute as @e[type=arrow,tag=Iceball,tag=Impact] at @s run function powerups:iceball/impact
-execute as @e[type=arrow,tag=Coalstock,tag=Impact] at @s run function powerups:coalstock/impact
-execute as @e[type=arrow,tag=Snowglobe,tag=Impact] at @s run function powerups:snowglobe/impact
+execute on vehicle run kill
 
-execute as @e[type=arrow,tag=AvalancheRocket,tag=Impact] at @s run function powerups:rocket/explosion
+# execute unless entity @s[tag=!Snowball,tag=!Iceball] at @s[nbt={inBlockState:{Name:"minecraft:target"}}] run function entityid:target/on_target
 
-
-
-kill @e[type=arrow,tag=Impact]
+execute at @s[tag=Snowball] run return run function powerups:snowball/impact
+execute at @s[tag=Iceball] run return run function powerups:iceball/impact
+execute at @s[tag=Coalstock] run return run function powerups:coalstock/impact
+execute at @s[tag=Snowglobe] run return run function powerups:snowglobe/impact
+execute at @s[tag=AvalancheRocket] run function powerups:rocket/explosion
