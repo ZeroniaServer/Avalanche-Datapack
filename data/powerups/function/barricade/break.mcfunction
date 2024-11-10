@@ -1,2 +1,2 @@
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air destroy
 kill
