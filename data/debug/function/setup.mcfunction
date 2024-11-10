@@ -85,6 +85,8 @@ team modify Red color red
 team modify noCol collisionRule never
 team modify Collide collisionRule pushOwnTeam
 
+scoreboard objectives remove vehicle.id
+scoreboard objectives remove freezetime
 
 #> Sleigh + WASD (thanks Cloud Wolf!)
 function powerups:sleigh/init
@@ -97,3 +99,26 @@ function animated_java:global/internal/gu/load
 #> Lobby worldspawn
 setworldspawn -63 52 -95
 spawnpoint @a -63 52 -95
+
+#> Gamerules
+gamerule mobGriefing false
+gamerule keepInventory true
+gamerule doImmediateRespawn true
+gamerule doLimitedCrafting true
+gamerule doMobSpawning false
+gamerule doMobLoot false
+gamerule naturalRegeneration false
+# gamerule sendCommandFeedback false
+gamerule logAdminCommands false
+gamerule disableRaids true
+gamerule doWardenSpawning false
+gamerule doInsomnia false
+gamerule doPatrolSpawning false
+gamerule announceAdvancements false
+gamerule doTraderSpawning false
+gamerule spectatorsGenerateChunks false
+gamerule maxEntityCramming 10000
+gamerule freezeDamage true
+gamerule fallDamage false
+gamerule fireDamage false
+gamerule drowningDamage false

@@ -16,9 +16,3 @@ scoreboard objectives add vehicle.dx dummy
 scoreboard objectives add vehicle.dz dummy
 scoreboard players set .friction vehicle 15
 scoreboard players set .damper vehicle 5
-
-scoreboard objectives remove vehicle.id
-scoreboard objectives remove freezetime
-
-team add noCol
-team modify noCol collisionRule never

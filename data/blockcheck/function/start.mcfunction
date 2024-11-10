@@ -1,0 +1,3 @@
+tp @s ~-8 ~-8 ~-8
+execute if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z if function blockcheck:z at @s run function blockcheck:fail
+kill

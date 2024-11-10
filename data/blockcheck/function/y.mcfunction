@@ -1,0 +1,2 @@
+execute if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x if function blockcheck:x at @s run return run tp @s ~-17 ~1 ~
+return fail
