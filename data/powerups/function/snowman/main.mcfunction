@@ -11,5 +11,5 @@ scoreboard players add @e[type=arrow,tag=SnowmanSnowball] CmdData 1
 execute as @e[type=arrow,tag=SnowmanSnowball,scores={CmdData=10}] run data merge entity @s {NoGravity:0b}
 
 execute as @e[type=snowball,tag=SnowmanSnowball] on vehicle on passengers run tag @s add HasVehicle
-execute as @e[type=snowball,tag=SnowmanSnowball,tag=!HasVehicle] run function powerups:snowball/impact
+execute as @e[type=snowball,tag=SnowmanSnowball,tag=!HasVehicle] at @s run function powerups:snowball/impact
 execute as @e[type=snowball,tag=SnowmanSnowball,tag=HasVehicle] run tag @s remove HasVehicle

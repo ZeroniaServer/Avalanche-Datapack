@@ -6,7 +6,7 @@ execute as @e[type=snowball,tag=!HasType] store success score @s CmdData on orig
 tag @e[type=snowball,scores={CmdData=1}] add owned
 
 #> Spawn arrows in snowballs
-execute as @e[type=snowball,tag=owned] summon arrow run function powerups:throwable_init/spawn_arrow
+execute as @e[type=snowball,tag=owned] at @s run function powerups:throwable_init/owned
 
 #> Detect snowballs with arrows, add "type" to its passenger
 execute as @e[type=snowball,tag=owned,tag=HasPassenger,tag=!HasType] on passengers on vehicle run function powerups:throwable_init/set_type

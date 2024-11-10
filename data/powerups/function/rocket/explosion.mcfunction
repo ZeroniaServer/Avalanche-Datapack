@@ -41,6 +41,5 @@ scoreboard players set $blast CmdData 0
 execute if entity @a[gamemode=!spectator,distance=..5] run scoreboard players set $blast CmdData 1
 execute if score $blast CmdData matches 1 run function powerups:rocket/blast/summonslime
 
-execute as @s on vehicle run kill @s
-execute as @s on passengers run kill @s
+execute on passengers run kill @s
 kill @s
