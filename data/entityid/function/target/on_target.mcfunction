@@ -8,7 +8,9 @@ execute unless score @s throwsb matches 2.. if entity @e[type=item_display,tag=d
 
 #> Find new block player hit this tick
 data modify storage entityid:target Motion set from entity @s Motion
-execute summon marker run function entityid:target/find_block
+
+execute if entity @s[tag=Iceball] summon marker run function entityid:target/find_block {limit:2}
+execute if entity @s[tag=Snowball] summon marker run function entityid:target/find_block {limit:1}
 
 #> Ice ball special consideration
-execute if entity @s[tag=Iceball] run tag @n[type=item_display,tag=damaged] add break
+execute if entity @s[tag=Iceball] run tag @e[type=item_display,tag=damaged,predicate=player:matches_uuid] add break
