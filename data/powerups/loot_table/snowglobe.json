@@ -28,7 +28,7 @@
                             "show_in_tooltip": false
                         },
                         "minecraft:use_cooldown": {
-                            "seconds": 1,
+                            "seconds": 12,
                             "cooldown_group": "snowglobe"
                         }
                     }
