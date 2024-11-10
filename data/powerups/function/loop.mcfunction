@@ -28,3 +28,6 @@ function powerups:campfire/main
 
 #> Icicle
 function powerups:icicle/main
+
+#> Barricade
+function powerups:barricade/main

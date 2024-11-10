@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:block_state_property",
+                        "block": "minecraft:clay",
+                        "properties": {}
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "powerups:barricade/place"
+    }
+}
