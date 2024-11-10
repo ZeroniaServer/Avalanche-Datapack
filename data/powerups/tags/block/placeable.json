@@ -16,6 +16,7 @@
     "minecraft:diorite",
     "minecraft:diorite_stairs",
     "minecraft:light_blue_concrete",
-    "minecraft:stone"
+    "minecraft:stone",
+    "minecraft:target"
   ]
 }
