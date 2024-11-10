@@ -122,3 +122,4 @@ gamerule freezeDamage true
 gamerule fallDamage false
 gamerule fireDamage false
 gamerule drowningDamage false
+gamerule doTileDrops false
