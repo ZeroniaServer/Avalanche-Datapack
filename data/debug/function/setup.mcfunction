@@ -33,6 +33,7 @@ scoreboard objectives modify fireworkCount displayname {translate:"space.-5"}
 scoreboard objectives add modiowner dummy
 scoreboard objectives add spawnPlaceable minecraft.used:minecraft.ghast_spawn_egg
 scoreboard objectives add placeBarricade minecraft.used:minecraft.clay
+scoreboard objectives add mineBarricade minecraft.mined:minecraft.target
 scoreboard objectives add hasBarricades dummy
 scoreboard objectives add hasCampfires dummy
 scoreboard objectives add hasSnowmen dummy
