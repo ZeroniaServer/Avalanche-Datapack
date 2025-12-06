@@ -10,9 +10,9 @@ execute unless score @s throwsb matches 2.. if entity @e[type=item_display,tag=d
 data modify storage entityid:target Motion set from entity @s Motion
 
 scoreboard players operation $tempuuid UUIDscore = @s entityid
-execute if entity @s[tag=Iceball] summon marker run function entityid:target/find_block {limit:2}
-execute if entity @s[tag=Snowball] summon marker run function entityid:target/find_block {limit:1}
-execute if entity @s[tag=SnowmanSnowball] summon marker run function entityid:target/find_block {limit:1}
+execute if entity @s[tag=Iceball] summon marker run function entityid:target/find_block {limit:2,type:break}
+execute if entity @s[tag=Snowball] summon marker run function entityid:target/find_block {limit:1,type:damage}
+execute if entity @s[tag=SnowmanSnowball] summon marker run function entityid:target/find_block {limit:1,type:damage}
 
 #> Ice ball special consideration
 execute if entity @s[tag=Iceball] run tag @e[type=item_display,tag=damaged,predicate=player:matches_uuid] add break
