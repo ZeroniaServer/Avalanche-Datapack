@@ -1,3 +1,5 @@
+tag @s add damaged
+
 execute unless block ~ ~ ~ target run return run kill
 
 # fixes double ice break break but honestly it's less fun with that fixed

@@ -32,9 +32,6 @@ function powerups:campfire/main
 #> Icicle
 function powerups:icicle/main
 
-#> Barricade
-function powerups:barricade/main
-
 #> Giftbox spawning
 function powerups:giftbox/animation
 
