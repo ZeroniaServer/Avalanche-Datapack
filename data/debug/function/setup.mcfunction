@@ -45,7 +45,7 @@ scoreboard objectives add sleighDamage dummy
 scoreboard objectives add surfTimer dummy
 scoreboard objectives add leavecheck dummy
 scoreboard players add $curr leavecheck 0
-scoreboard objectives add spectate trigger
+scoreboard objectives add joinspec trigger
 scoreboard objectives add joinred trigger
 scoreboard objectives add joingreen trigger
 scoreboard objectives add snowmanhit dummy
@@ -56,6 +56,7 @@ scoreboard objectives add settings trigger
 scoreboard objectives add HitmarkerType dummy
 scoreboard objectives add HitmarkerTimer dummy
 scoreboard objectives remove GamesPlayed
+scoreboard objectives remove spectate
 scoreboard objectives add toggleTips trigger
 scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy

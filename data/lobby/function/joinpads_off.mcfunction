@@ -23,3 +23,7 @@ execute as @a[tag=LeaveTeam,tag=WasSpectator] at @s run playsound leavespectator
 tag @a[tag=LeaveTeam] remove WasSpectator
 execute as @a[tag=LeaveTeam] run team join Lobby @s
 tag @a[tag=LeaveTeam] remove LeaveTeam
+
+execute as @a run trigger joingreen set 0
+execute as @a run trigger joinred set 0
+execute as @a run trigger joinspec set 0

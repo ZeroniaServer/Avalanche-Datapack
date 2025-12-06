@@ -110,10 +110,8 @@ execute as @a[tag=LeaveTeam] run team join Lobby @s
 execute unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 0 if score $mcancel CmdData matches -1 run function lobby:settings/cancel/resume
 tag @a[tag=LeaveTeam] remove LeaveTeam
 
-#> Servermode trigger commands
 #Green
-execute if score $servermode CmdData matches 1 run scoreboard players enable @a joingreen
-execute unless score $servermode CmdData matches 1 run trigger joingreen set 0
+scoreboard players enable @a joingreen
 
 execute if score $gamestate CmdData matches 0..1 unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData run tag @a[team=!Green,team=!Red,scores={joingreen=1..}] add JoinGreen
 execute if score $gamestate CmdData matches 2..3 unless score $NoMidgameJoins CmdData matches 1 unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData run tag @a[team=!Green,team=!Red,scores={joingreen=1..}] add JoinGreen
@@ -130,8 +128,7 @@ execute as @a[team=Green,scores={joingreen=1..}] run tellraw @s [{text:"[",color
 scoreboard players reset @a[scores={joingreen=1..}] joingreen
 
 #Red
-execute if score $servermode CmdData matches 1 run scoreboard players enable @a joinred
-execute unless score $servermode CmdData matches 1 run trigger joinred set 0
+scoreboard players enable @a joinred
 
 execute if score $gamestate CmdData matches 0..1 unless score $InRed CmdData > $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData run tag @a[team=!Red,team=!Green,scores={joinred=1..}] add JoinRed
 execute if score $gamestate CmdData matches 2..3 unless score $NoMidgameJoins CmdData matches 1 unless score $InRed CmdData >= $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData run tag @a[team=!Red,team=!Green,scores={joinred=1..}] add JoinRed
@@ -148,12 +145,11 @@ execute as @a[team=Red,scores={joinred=1..}] run tellraw @s [{text:"[",color:"da
 scoreboard players reset @a[scores={joinred=1..}] joinred
 
 #Spectator
-execute if score $servermode CmdData matches 1 run scoreboard players enable @a spectate
-execute unless score $servermode CmdData matches 1 run trigger spectate set 0
+scoreboard players enable @a joinspec
 
-execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 4 run tag @a[team=!Spectator,scores={spectate=1..}] add WarpSpectate
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 4 run tag @a[team=!Spectator,scores={joinspec=1..}] add WarpSpectate
 
-execute unless score $gamestate CmdData matches 0..3 as @a if score @s spectate matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_spectate",color:"red"}]
-execute as @a[team=Spectator,scores={spectate=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_spectating",color:"red"}]
+execute unless score $gamestate CmdData matches 0..3 as @a if score @s joinspec matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_joinspec",color:"red"}]
+execute as @a[team=Spectator,scores={joinspec=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_spectating",color:"red"}]
 
-scoreboard players reset @a[scores={spectate=1..}] spectate
+scoreboard players reset @a[scores={joinspec=1..}] joinspec

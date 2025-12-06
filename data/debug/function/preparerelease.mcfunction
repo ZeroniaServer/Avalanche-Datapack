@@ -8,5 +8,4 @@ function entityid:flush
 function debug:setup
 function debug:spawnfix
 function game:tips/newset
-scoreboard players reset $servermode CmdData
 scoreboard players set $forcedmodes CmdData 1
