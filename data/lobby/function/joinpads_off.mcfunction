@@ -22,7 +22,7 @@ tag @a[predicate=!lobby:joinpad_green,predicate=!lobby:joinpad_red,tag=RequestSe
 #> Leave
 scoreboard players enable @a[team=!Lobby] leavegame
 scoreboard players reset @a[team=Lobby] leavegame
-execute as @a[tag=LeaveTeam,team=Spectator] at @s run tellraw @a {translate:"lobby.left_spectator",color:"dark_aqua",with:[{selector:"@s",color:"blue"}]}
+execute as @a[tag=LeaveTeam,team=Spectator] at @s run tellraw @a {translate:"lobby.left_spectator",color:"dark_aqua",with:[{selector:"@s"}]}
 execute as @a[tag=LeaveTeam,team=!] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
 execute as @a[tag=LeaveTeam] run gamemode adventure @s

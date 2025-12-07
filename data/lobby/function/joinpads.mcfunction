@@ -48,8 +48,8 @@ execute as @a[tag=JoinGreen] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.green",color:"green"}]}
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.green",color:"green"}]}
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.green",color:"green"}]}
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.green",color:"green"}]}
 
 execute as @a[tag=JoinGreen] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinGreen] remove JoinGreen
@@ -78,8 +78,8 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 3 run loot give @
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.red",color:"red"}]}
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.red",color:"red"}]}
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.red",color:"red"}]}
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.red",color:"red"}]}
 execute as @a[tag=JoinRed] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinRed] remove JoinRed
 tag @a[tag=tryJoinRed,predicate=!lobby:joinpad_red] remove tryJoinRed
@@ -90,7 +90,7 @@ scoreboard players reset @a[team=Lobby] leavegame
 execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveTeam
 execute as @a[tag=LeaveTeam,team=Green] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_team",color:"dark_aqua",with:[{selector:"@s",color:"green"}]}
 execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_team",color:"dark_aqua",with:[{selector:"@s",color:"red"}]}
-execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_spectator",color:"dark_aqua",with:[{selector:"@s",color:"blue"}]}
+execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_spectator",color:"dark_aqua",with:[{selector:"@s"}]}
 execute as @a[tag=LeaveTeam] unless entity @s[team=!Green,team=!Red] if score $gamestate CmdData matches 2 store result score @s BarricadeTracker run clear @s clay 0
 execute as @a[tag=LeaveTeam,team=!] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
