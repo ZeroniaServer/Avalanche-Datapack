@@ -322,3 +322,7 @@ data modify storage avalanche:messages ReadyToPlay set value [{text:"[",color:"d
 
 #> Remove void platform
 fill -8 -61 -8 24 -61 -1 air
+
+#> Remove old timer bossbars
+bossbar remove bar_g_timer
+bossbar remove bar_r_timer
