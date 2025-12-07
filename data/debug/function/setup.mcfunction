@@ -171,35 +171,29 @@ setworldspawn -63 52 -95
 spawnpoint @a -63 52 -95
 
 #> Gamerules
-gamerule minecraft:mob_griefing false
-gamerule minecraft:keep_inventory true
-gamerule minecraft:immediate_respawn true
-gamerule minecraft:limited_crafting true
-gamerule minecraft:spawn_mobs false
-gamerule minecraft:spawn_monsters false
-gamerule minecraft:mob_drops false
-gamerule minecraft:entity_drops false
-gamerule minecraft:natural_health_regeneration false
-# gamerule minecraft:send_command_feedback false
-gamerule minecraft:log_admin_commands false
-gamerule minecraft:raids false
-gamerule minecraft:spawn_wardens false
-gamerule minecraft:spawn_phantoms false
-gamerule minecraft:spawn_patrols false
-gamerule minecraft:show_advancement_messages false
-gamerule minecraft:spawn_wandering_traders false
-gamerule minecraft:spectators_generate_chunks false
-gamerule minecraft:max_entity_cramming 10000
-gamerule minecraft:freeze_damage true
-gamerule minecraft:fall_damage false
-gamerule minecraft:fire_damage false
-gamerule minecraft:drowning_damage false
-gamerule minecraft:block_drops true
-gamerule minecraft:locator_bar false
-gamerule minecraft:advance_time false
-gamerule minecraft:advance_weather false
-gamerule minecraft:allow_entering_nether_using_portals false
-gamerule minecraft:pvp true
+gamerule mobGriefing false
+gamerule keepInventory true
+gamerule doImmediateRespawn true
+gamerule doLimitedCrafting true
+gamerule doMobSpawning false
+gamerule doMobLoot false
+gamerule naturalRegeneration false
+# gamerule sendCommandFeedback false
+gamerule logAdminCommands false
+gamerule disableRaids true
+gamerule doWardenSpawning false
+gamerule doInsomnia false
+gamerule doPatrolSpawning false
+gamerule announceAdvancements false
+gamerule doTraderSpawning false
+gamerule spectatorsGenerateChunks false
+gamerule maxEntityCramming 10000
+gamerule freezeDamage true
+gamerule fallDamage false
+gamerule fireDamage false
+gamerule drowningDamage false
+gamerule doTileDrops true
+gamerule locatorBar false
 
 #> Join area modifications
 fill -96 58 -145 -94 57 -145 air replace minecraft:barrier
@@ -314,8 +308,8 @@ setworldspawn -65 52 -65
 
 #> Messages
 # TODO: UPDATE PACK LINKS!
-data modify storage avalanche:messages ResourcePack set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{text:"We strongly recommend you to ",color:"gray"},{text:"use the resource pack",bold:true,color:"red"},{text:". ",color:"gray"},{text:"[CLICK HERE TO DOWNLOAD]",color:"green",bold:true,underlined:true,click_event:{action:"open_url",url:"https://drive.google.com/uc?export=download&id=1nCEi8RPNZzgSPiWJlJTzzjk9NyHahMqu"}}]
-data modify storage avalanche:messages OutdatedPack set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{text:"You are using an outdated version of the resource pack! ",color:"gray"},{text:"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]",color:"green",bold:true,underlined:true,click_event:{action:"open_url",url:"https://drive.google.com/uc?export=download&id=1nCEi8RPNZzgSPiWJlJTzzjk9NyHahMqu"}}]
+data modify storage avalanche:messages ResourcePack set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{text:"We strongly recommend you to ",color:"gray"},{text:"use the resource pack",bold:true,color:"red"},{text:". ",color:"gray"},{text:"[CLICK HERE TO DOWNLOAD]",color:"green",bold:true,underlined:true,click_event:{action:"open_url",url:"https://drive.google.com/uc?export=download&id=1JlACo9_13Ma6r4w5kme-aGlhM8L9h3ku"}}]
+data modify storage avalanche:messages OutdatedPack set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{text:"You are using an outdated version of the resource pack! ",color:"gray"},{text:"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]",color:"green",bold:true,underlined:true,click_event:{action:"open_url",url:"https://drive.google.com/uc?export=download&id=1JlACo9_13Ma6r4w5kme-aGlhM8L9h3ku"}}]
 data modify storage avalanche:messages SettingsBox set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"chat.settings_tp",color:"#f089a8",underlined:true,with:[{translate:"chat.settings_box",color:"#1dc6c7",bold:true}]}]
 data modify storage avalanche:messages ReadyToPlay set value [{text:"[",color:"dark_gray"},{text:"!",color:"green",bold:true},{text:"] ",color:"dark_gray"},{translate:"chat.the_game",color:"gray",with:[{translate:"chat.ready_to_play",color:"green",bold:true}]}]
 
