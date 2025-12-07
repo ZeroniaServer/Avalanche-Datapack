@@ -1,9 +1,6 @@
 execute if entity @s[tag=Green] positioned ~ ~0.5 ~ if entity @a[team=Green,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run tag @s add Reviving
 execute if entity @s[tag=Red] positioned ~ ~0.5 ~ if entity @a[team=Red,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run tag @s add Reviving
 
-execute if entity @s[tag=Green] positioned ~ ~0.5 ~ if entity @a[team=Green,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run scoreboard players set @s CmdData 1150
-execute if entity @s[tag=Red] positioned ~ ~0.5 ~ if entity @a[team=Red,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run scoreboard players set @s CmdData 1150
-
 execute if entity @s[tag=Green] positioned ~ ~0.5 ~ as @a[team=Green,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run tag @s add Reviving
 execute if entity @s[tag=Red] positioned ~ ~0.5 ~ as @a[team=Red,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run tag @s add Reviving
 
@@ -24,3 +21,6 @@ tag @a remove Reviving
 
 execute if entity @s[tag=Green] positioned ~ ~0.5 ~ as @a[team=Green,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run scoreboard players set @s playerHP 3
 execute if entity @s[tag=Red] positioned ~ ~0.5 ~ as @a[team=Red,distance=..3,tag=Knockout,scores={playerHP=..0},limit=1,sort=nearest] run scoreboard players set @s playerHP 3
+
+item replace entity @s[tag=Green,tag=!Extinguish,tag=Reviving] contents with diamond_hoe[item_model="minecraft:campfire/green_revive"]
+item replace entity @s[tag=Red,tag=!Extinguish,tag=Reviving] contents with diamond_hoe[item_model="minecraft:campfire/red_revive"]
