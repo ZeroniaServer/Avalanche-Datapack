@@ -1,1 +1,0 @@
-execute unless block ~ ~ ~ target run kill
