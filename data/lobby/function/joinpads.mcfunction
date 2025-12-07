@@ -149,7 +149,7 @@ scoreboard players enable @a joinspec
 
 execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 4 run tag @a[team=!Spectator,scores={joinspec=1..}] add WarpSpectate
 
-execute unless score $gamestate CmdData matches 0..3 as @a if score @s joinspec matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_joinspec",color:"red"}]
+execute unless score $gamestate CmdData matches 0..3 as @a if score @s joinspec matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_spectate",color:"red"}]
 execute as @a[team=Spectator,scores={joinspec=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_spectating",color:"red"}]
 
 scoreboard players reset @a[scores={joinspec=1..}] joinspec
