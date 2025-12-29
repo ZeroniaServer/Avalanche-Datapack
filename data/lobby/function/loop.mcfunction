@@ -9,8 +9,20 @@ execute as @a[team=!Lobby,team=!Spectator] unless score @s gameID = $current gam
 execute unless score $current gameID matches 0..2147483646 run function lobby:settings/gameidcycle
 
 #> Joinpads
+scoreboard players enable @a joinred
+scoreboard players enable @a joingreen
+scoreboard players enable @a joinspec
+
 execute if score $gamestate CmdData matches 0..3 run function lobby:joinpads
-execute if score $gamestate CmdData matches -1 run function lobby:joinpads_off
+execute unless score $gamestate CmdData matches 0..3 run function lobby:joinpads_off
+
+tag @a[team=!Spectator,scores={joinspec=1..}] add WarpSpectate
+execute as @a[team=Spectator,scores={joinspec=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_spectating",color:"red"}]
+execute as @a[team=Spectator,scores={joinspec=1..}] at @s run playsound joinfail master @s ~ ~ ~ 1 0
+
+scoreboard players reset @a[scores={joinred=1..}] joinred
+scoreboard players reset @a[scores={joingreen=1..}] joingreen
+scoreboard players reset @a[scores={joinspec=1..}] joinspec
 
 #> Teleporters
 function lobby:poles/main
@@ -39,11 +51,9 @@ execute unless score $gamestate CmdData matches 2.. run bossbar set bar_prep pla
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_main players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_green players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_red players
-execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_timer players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_main players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_red players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_green players
-execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_timer players
 
 #> Parkour
 execute as @a[team=Lobby] run function lobby:parkour/main

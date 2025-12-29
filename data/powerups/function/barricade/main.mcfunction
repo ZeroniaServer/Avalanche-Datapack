@@ -1,1 +1,2 @@
-execute as @e[type=item_display,tag=barricade] at @s positioned ~ ~100 ~ run function powerups:barricade/tick
+execute as @a[team=!Lobby,team=!Spectator,scores={mineBarricade=1..}] at @s positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..5] at @s positioned ~ ~100 ~ unless block ~ ~ ~ target run kill
+scoreboard players reset @a mineBarricade

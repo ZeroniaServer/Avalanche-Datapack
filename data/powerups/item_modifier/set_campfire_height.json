@@ -1,0 +1,16 @@
+{
+    "function": "minecraft:set_custom_model_data",
+    "floats": {
+        "values": [
+            {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:context",
+                    "target": "this"
+                },
+                "score": "CmdData"
+            }
+        ],
+        "mode": "replace_all"
+    }
+}
