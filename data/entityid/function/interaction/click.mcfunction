@@ -1,3 +1,4 @@
+tag @a remove self
 tag @s add self
 execute as @e[type=interaction] run function entityid:interaction/trycheck
 tag @s remove self

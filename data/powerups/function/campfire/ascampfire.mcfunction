@@ -7,6 +7,11 @@ execute if entity @s[scores={CmdData=20..900},tag=!Extinguish,tag=!Reviving] run
 
 #> Revive one nearby player
 execute if entity @s[scores={CmdData=20..900},tag=!Extinguish,tag=!Reviving] run function powerups:campfire/revive
+execute if entity @s[tag=Reviving] run scoreboard players add @s reviveTime 1
+execute if entity @s[tag=Reviving,scores={reviveTime=15..}] run scoreboard players set @s[scores={CmdData=781..}] CmdData 900
+execute if entity @s[tag=Reviving,scores={reviveTime=15..}] run scoreboard players add @s[scores={CmdData=..780}] CmdData 120
+
+item modify entity @s contents powerups:set_campfire_height
 
 #> Extinguish
 execute if entity @s[scores={CmdData=900..},tag=!Extinguish] run particle smoke ~ ~0.2 ~ 0.1 0.2 0.1 0.03 5 force
@@ -27,9 +32,6 @@ execute if entity @s[scores={CmdData=855},tag=!Extinguish,tag=Reviving] run play
 execute if entity @s[scores={CmdData=850},tag=!Extinguish,tag=Reviving] run particle soul_fire_flame ~ ~0.2 ~ 0 0 0 0.1 15 force
 execute if entity @s[scores={CmdData=850..880},tag=!Extinguish,tag=Reviving] run particle soul ~ ~0.1 ~ 0.1 0.4 0.1 0.1 1 force
 execute if entity @s[scores={CmdData=850..860},tag=!Extinguish,tag=Reviving] run particle soul_fire_flame ~ ~0.5 ~ 0 0.4 0 0.01 3 force
-
-execute if entity @s[scores={CmdData=850},tag=Green,tag=!Extinguish,tag=Reviving] run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/green_revive"]
-execute if entity @s[scores={CmdData=850},tag=Red,tag=!Extinguish,tag=Reviving] run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/red_revive"]
 
 execute if entity @s[scores={CmdData=900..},tag=!Extinguish] run tag @s add Extinguish
 

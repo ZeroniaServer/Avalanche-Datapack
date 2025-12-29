@@ -10,13 +10,11 @@ execute unless score $gamestate CmdData matches 2 run bossbar set bar_prep playe
 execute if score $gamestate CmdData matches 3.. run bossbar set bar_r_main players @a[team=Red]
 execute if score $gamestate CmdData matches 3.. run bossbar set bar_r_red players @a[team=Red]
 execute if score $gamestate CmdData matches 3.. run bossbar set bar_r_green players @a[team=Red]
-execute if score $gamestate CmdData matches 3.. run bossbar set bar_r_timer players @a[team=Red]
 
 #> Show green bars for Green and Spectator teams
 execute if score $gamestate CmdData matches 3.. run bossbar set bar_g_main players @a[team=!Red,team=!Lobby]
 execute if score $gamestate CmdData matches 3.. run bossbar set bar_g_green players @a[team=!Red,team=!Lobby]
 execute if score $gamestate CmdData matches 3.. run bossbar set bar_g_red players @a[team=!Red,team=!Lobby]
-execute if score $gamestate CmdData matches 3.. run bossbar set bar_g_timer players @a[team=!Red,team=!Lobby]
 
 #> Calculate bossbar progress
 execute store result score $bar_g_green CmdData run scoreboard players get $green_progress CmdData

@@ -23,9 +23,9 @@ execute as @a[tag=LobbyWarp] at @s run playsound playerwarp master @s ~ ~ ~ 0.4 
 tag @a[tag=LobbyWarp] remove LobbyWarp
 
 #> Spectate
-execute as @a[tag=WarpSpectate] run tellraw @a {translate:"lobby.joined_spectator",color:"dark_aqua",with:[{selector:"@s",color:"blue"}]}
 execute as @a[tag=WarpSpectate] at @s run gamemode spectator @s
 execute as @a[tag=WarpSpectate] at @s run team join Spectator @s
+execute as @a[tag=WarpSpectate] run tellraw @a {translate:"lobby.joined_spectator",color:"dark_aqua",with:[{selector:"@s"}]}
 execute as @a[tag=WarpSpectate] at @s run tp @s @s
 execute as @a[tag=WarpSpectate] at @s run tp @s -63 100 -221 0 90
 execute as @a[tag=WarpSpectate] at @s run playsound joinspectator master @s ~ ~ ~ 1 1

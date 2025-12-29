@@ -31,8 +31,10 @@ scoreboard objectives add modify trigger
 scoreboard objectives add fireworkCount dummy
 scoreboard objectives modify fireworkCount displayname {translate:"space.-5"}
 scoreboard objectives add modiowner dummy
+scoreboard objectives add reviveTime dummy
 scoreboard objectives add spawnPlaceable minecraft.used:minecraft.ghast_spawn_egg
 scoreboard objectives add placeBarricade minecraft.used:minecraft.clay
+scoreboard objectives add mineBarricade minecraft.mined:minecraft.target
 scoreboard objectives add hasBarricades dummy
 scoreboard objectives add hasCampfires dummy
 scoreboard objectives add hasSnowmen dummy
@@ -45,7 +47,7 @@ scoreboard objectives add sleighDamage dummy
 scoreboard objectives add surfTimer dummy
 scoreboard objectives add leavecheck dummy
 scoreboard players add $curr leavecheck 0
-scoreboard objectives add spectate trigger
+scoreboard objectives add joinspec trigger
 scoreboard objectives add joinred trigger
 scoreboard objectives add joingreen trigger
 scoreboard objectives add snowmanhit dummy
@@ -56,6 +58,7 @@ scoreboard objectives add settings trigger
 scoreboard objectives add HitmarkerType dummy
 scoreboard objectives add HitmarkerTimer dummy
 scoreboard objectives remove GamesPlayed
+scoreboard objectives remove spectate
 scoreboard objectives add toggleTips trigger
 scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy
@@ -141,8 +144,8 @@ team add noCol
 team add Collide
 team add Developer
 
-team modify Lobby color blue
-team modify Spectator color dark_blue
+team modify Lobby color gray
+team modify Spectator color blue
 team modify Developer color dark_green
 
 team modify Lobby collisionRule never
@@ -244,11 +247,11 @@ summon interaction -61 48 -128 {width:1,height:4.6,Tags:["LobbyTPInteraction","W
 fill -61 48 -128 -61 50 -128 cobblestone_wall
 
 #Teams -> Lobby
-summon minecraft:item_display -80 52 -148 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_green"}},item_display:"head",Tags:["TeleportPole","GreenLobbyPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon minecraft:item_display -80 52 -148 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_gray"}},item_display:"head",Tags:["TeleportPole","GreenLobbyPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
 summon interaction -80 52 -148 {width:1,height:4.6,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
 fill -80 52 -148 -80 54 -148 cobblestone_wall
 
-summon minecraft:item_display -42 48 -148 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_red"}},item_display:"head",Tags:["TeleportPole","RedLobbyPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon minecraft:item_display -42 48 -148 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_gray"}},item_display:"head",Tags:["TeleportPole","RedLobbyPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
 summon interaction -42 48 -148 {width:1,height:4.6,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
 fill -42 48 -148 -42 50 -148 cobblestone_wall
 
@@ -261,11 +264,11 @@ summon minecraft:item_display -42 48 -152 {item:{id:"diamond_hoe",components:{it
 summon interaction -42 48 -152 {width:1,height:4.6,Tags:["LobbyTPInteraction","WarpGreen"],response:1b}
 fill -42 50 -152 -42 50 -152 cobblestone_wall
 
-summon minecraft:item_display -4 45 -233 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_blue"}},item_display:"head",Tags:["TeleportPole","LeavePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon minecraft:item_display -4 45 -233 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_gray"}},item_display:"head",Tags:["TeleportPole","LeavePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
 summon interaction -4 45 -233 {width:1,height:4.6,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
 fill -4 45 -233 -4 47 -233 heavy_core
 
-summon minecraft:item_display -122 45 -209 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_blue"}},item_display:"head",Tags:["TeleportPole","LeavePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon minecraft:item_display -122 45 -209 {item:{id:"diamond_hoe",components:{item_model:"minecraft:custom/pole_gray"}},item_display:"head",Tags:["TeleportPole","LeavePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
 summon interaction -122 45 -209 {width:1,height:4.6,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
 fill -122 45 -209 -122 47 -209 heavy_core
 
@@ -273,22 +276,22 @@ execute as @e[tag=LobbyTPInteraction,tag=!entityid_assigned] run function entity
 
 #> Text displays
 kill @e[type=text_display,tag=LobbyText]
-summon text_display -63 50 -126.15 {Tags:["LobbyText"],text:["",{translate:"lobby.spectate",color:"dark_blue"}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
-summon text_display -65 49 -127.15 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_left:",color:"#2ba818"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
-summon text_display -61 49 -127.15 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_right:",color:"#c40000"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -63 50 -126.15 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.spectate",color:"dark_blue"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -64.525 49 -127.15 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_left:",color:"#2ba818"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -60.525 49 -127.15 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_right:",color:"#c40000"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 
 
-summon text_display -41.15 49 -148 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_left:",color:"#c40000"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
-summon text_display -41.15 49 -152 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_up:",color:"#2ba818"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -41.15 49 -147.475 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_left:",color:"dark_gray"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -41.15 49 -151.475 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_up:",color:"#2ba818"},{text:" \uD900\uDC01"}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 
-summon text_display -79.85 53 -152 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_up:",color:"#c40000"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
-summon text_display -79.85 53 -148 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_right:",color:"#2ba818"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -79.85 53 -151.525 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_up:",color:"#c40000"},{text:" \uD900\uDC01"}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -79.85 53 -147.525 {Tags:["LobbyText"],text:["",{text:" "},{translate:":arrow_right:",color:"dark_gray"},{text:" "}],transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 
 summon text_display -89 54.35 -149 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.join.green",color:"green"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
 summon text_display -36 50.35 -151 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.join.red",color:"red"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
 
-summon text_display -121.15 46 -209 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.leave_game",color:"dark_blue"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
-summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.leave_game",color:"dark_blue"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -121.15 46 -209 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.leave_game",color:"dark_gray"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:["",{text:" "},{translate:"lobby.leave_game",color:"dark_gray"},{text:" "}],transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 
 #> Base campfires
 kill @e[type=marker,tag=BaseCampfire]
@@ -313,3 +316,7 @@ data modify storage avalanche:messages ReadyToPlay set value [{text:"[",color:"d
 
 #> Remove void platform
 fill -8 -61 -8 24 -61 -1 air
+
+#> Remove old timer bossbars
+bossbar remove bar_g_timer
+bossbar remove bar_r_timer
