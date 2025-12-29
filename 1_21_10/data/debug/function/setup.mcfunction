@@ -172,35 +172,29 @@ setworldspawn -63 52 -95
 spawnpoint @a -63 52 -95
 
 #> Gamerules
-gamerule minecraft:mob_griefing false
-gamerule minecraft:keep_inventory true
-gamerule minecraft:immediate_respawn true
-gamerule minecraft:limited_crafting true
-gamerule minecraft:spawn_mobs false
-gamerule minecraft:spawn_monsters false
-gamerule minecraft:mob_drops false
-gamerule minecraft:entity_drops false
-gamerule minecraft:natural_health_regeneration false
-# gamerule minecraft:send_command_feedback false
-gamerule minecraft:log_admin_commands false
-gamerule minecraft:raids false
-gamerule minecraft:spawn_wardens false
-gamerule minecraft:spawn_phantoms false
-gamerule minecraft:spawn_patrols false
-gamerule minecraft:show_advancement_messages false
-gamerule minecraft:spawn_wandering_traders false
-gamerule minecraft:spectators_generate_chunks false
-gamerule minecraft:max_entity_cramming 10000
-gamerule minecraft:freeze_damage true
-gamerule minecraft:fall_damage false
-gamerule minecraft:fire_damage false
-gamerule minecraft:drowning_damage false
-gamerule minecraft:block_drops true
-gamerule minecraft:locator_bar false
-gamerule minecraft:advance_time false
-gamerule minecraft:advance_weather false
-gamerule minecraft:allow_entering_nether_using_portals false
-gamerule minecraft:pvp true
+gamerule mobGriefing false
+gamerule keepInventory true
+gamerule doImmediateRespawn true
+gamerule doLimitedCrafting true
+gamerule doMobSpawning false
+gamerule doMobLoot false
+gamerule naturalRegeneration false
+# gamerule sendCommandFeedback false
+gamerule logAdminCommands false
+gamerule disableRaids true
+gamerule doWardenSpawning false
+gamerule doInsomnia false
+gamerule doPatrolSpawning false
+gamerule announceAdvancements false
+gamerule doTraderSpawning false
+gamerule spectatorsGenerateChunks false
+gamerule maxEntityCramming 10000
+gamerule freezeDamage true
+gamerule fallDamage false
+gamerule fireDamage false
+gamerule drowningDamage false
+gamerule doTileDrops true
+gamerule locatorBar false
 
 #> Join area modifications
 fill -96 58 -145 -94 57 -145 air replace minecraft:barrier

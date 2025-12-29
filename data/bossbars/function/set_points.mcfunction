@@ -15,6 +15,5 @@ $execute if score $GreenPoints CmdData matches 10.. run data modify storage game
 $execute if score $GreenPoints CmdData matches 100.. run data modify storage game:data green_g set value {text:"$(greenpoints)",color:"#a8a00c"}
 
 execute unless entity @e[type=marker,tag=AVSnowStarter] run data modify storage game:data mountain set value {text:"\uE005",color:"#a8a000"}
-execute unless entity @e[type=marker,tag=AVSnowStarter] run data modify storage game:data mountain set value {text:"\uE005",color:"#a8a000"}
 
 function bossbars:set_points_bossbar with storage game:data
