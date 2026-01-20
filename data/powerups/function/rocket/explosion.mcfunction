@@ -35,9 +35,9 @@ execute as @e[type=turtle,distance=..5] at @s run scoreboard players add @s slei
 execute as @e[type=turtle,distance=..5] at @s run function powerups:sleigh/break
 
 #> Destroy nearby Snow Barricades
-execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..4] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
-execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..2.5] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
-execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..1.5] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
+execute positioned ~ ~-1000 ~ as @e[type=item_display,tag=barricade,distance=..4] at @s positioned ~ ~1000 ~ run function powerups:barricade/damage
+execute positioned ~ ~-1000 ~ as @e[type=item_display,tag=barricade,distance=..2.5] at @s positioned ~ ~1000 ~ run function powerups:barricade/damage
+execute positioned ~ ~-1000 ~ as @e[type=item_display,tag=barricade,distance=..1.5] at @s positioned ~ ~1000 ~ run function powerups:barricade/damage
 
 #> Give levitation + tag players as Blasted
 execute as @a[tag=!Blasted,gamemode=!spectator,distance=..5] unless predicate game:low_arena run effect give @s levitation 1 60 true
