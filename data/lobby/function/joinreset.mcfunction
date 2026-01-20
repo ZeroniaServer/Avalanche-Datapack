@@ -1,3 +1,8 @@
+tag @s add self
+execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_g players @a[tag=!self]
+execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches 1.. run bossbar set bar_ready_g players @a[tag=!self]
+tag @s remove self
+
 team join Lobby @s
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a[team=Lobby]
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator]
