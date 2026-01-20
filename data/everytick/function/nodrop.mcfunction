@@ -9,6 +9,7 @@ scoreboard players operation $tempuuid UUIDscore = @s UUIDscore
 execute if entity @s[tag=processed] unless entity @a[team=!Spectator,gamemode=!spectator,predicate=player:matches_uuid] run kill @s
 execute if entity @a[team=!Spectator,predicate=player:matches_uuid] at @a[team=!Spectator,predicate=player:matches_uuid,limit=1] run tp @s[tag=!IsSleighItem] ~ ~-0.5 ~
 execute if entity @a[team=!Spectator,predicate=player:matches_uuid] at @s run tp @s @s
+execute if entity @a[team=!Spectator,predicate=player:matches_uuid,predicate=wasd:on_sleigh] at @s run tp @s ~ ~0.5 ~
 execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData
 
 execute on origin store success score $fullcheck CmdData if entity @s[team=Lobby,tag=fullinv]
