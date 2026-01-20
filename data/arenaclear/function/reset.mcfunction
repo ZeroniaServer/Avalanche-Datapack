@@ -1,6 +1,8 @@
 #> Removes all blocks/entities from the arena to save on lag
 function powerups:barricade/clearall
 execute as @e[type=turtle,tag=vehicle] run function arenaclear:kill_recursive
+kill @e[type=interaction,tag=SleighHitbox]
+kill @e[type=item_display,tag=vehicle]
 function animated_java:snowman/remove/all
 execute as @e[type=husk] run function arenaclear:kill
 execute as @e[type=snowball] run function arenaclear:kill_recursive
