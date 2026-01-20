@@ -1,7 +1,7 @@
 scoreboard players add @s fireworkCount 1
 
 tag @s add self
-execute summon marker run function powerups:rocket/spawnitem
+execute summon item_display run function powerups:rocket/spawnitem
 
 scoreboard players set @s fireworkCount 0
 

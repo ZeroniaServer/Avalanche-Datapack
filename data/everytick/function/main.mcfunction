@@ -49,3 +49,7 @@ execute as @e[type=item_display,predicate=!game:in_arena,tag=rocketdisplay] run 
 
 #> Toggle tips
 execute as @a run function everytick:toggletips
+
+#> Ground position recorder
+kill 00000000-0000-0001-0000-000100000000
+summon marker 0 0 0 {Tags:["groundPosRecorder"],UUID:[I;0,1,1,0]}

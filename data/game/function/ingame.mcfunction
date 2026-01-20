@@ -18,6 +18,7 @@ execute as @a[team=!Lobby,team=!Spectator] unless score @s UUIDscore matches -21
 function powerups:loop
 
 #> Player logic
+execute as @a unless entity @s[team=!Red,team=!Green] run function player:check_ground
 function player:health
 function player:knockout
 function player:base_campfires
