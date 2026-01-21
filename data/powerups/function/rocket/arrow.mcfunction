@@ -12,8 +12,8 @@ execute on vehicle run data modify storage avalanche:rocket mot set from entity 
 execute summon marker run function powerups:throwable_init/calc_rotation
 execute on passengers run data modify entity @s Rotation set from storage avalanche:rocket rot
 
-execute at @s if predicate game:green_base run tag @s add BasePrevention
-execute at @s if predicate game:red_base run tag @s add BasePrevention
+execute at @s[tag=Red] if predicate game:green_base run tag @s add BasePrevention
+execute at @s[tag=Green] if predicate game:red_base run tag @s add BasePrevention
 execute at @s[scores={lifetime=21..},tag=!BasePrevention] run function powerups:rocket/explosion
 execute as @s[tag=BasePrevention] on vehicle run kill @s
 execute as @s[tag=BasePrevention] on passengers run kill @s

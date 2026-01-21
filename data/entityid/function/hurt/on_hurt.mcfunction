@@ -19,7 +19,7 @@ execute on origin if entity @a[tag=victim,tag=KOmessage,limit=1] run scoreboard 
 tag @a[tag=victim,tag=KOmessage] remove KOmessage
 execute unless entity @s[tag=SnowmanSnowball] run scoreboard players reset @a[tag=victim,tag=!Knockout] snowmanhit
 execute if entity @s[tag=SnowmanSnowball] run scoreboard players set @a[tag=victim,tag=!Knockout] snowmanhit 1
-execute at @s if predicate game:red_base run kill @s
-execute at @s if predicate game:green_base run kill @s
+execute at @s[tag=Green] if predicate game:red_base run kill @s
+execute at @s[tag=Red] if predicate game:green_base run kill @s
 execute at @s run function powerups:throwable_init/impact
 kill
