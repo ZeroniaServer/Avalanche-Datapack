@@ -57,6 +57,14 @@
                             "seconds": 0.25,
                             "cooldown_group": "snowball"
                         },
+                        "can_break": {
+                            "blocks": "minecraft:target"
+                        },
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "can_break"
+                            ]
+                        },
                         "minecraft:use_remainder": {
                             "id": "minecraft:snowball",
                             "components": {
