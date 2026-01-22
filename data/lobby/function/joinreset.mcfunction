@@ -3,6 +3,8 @@ execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_g player
 execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches 1.. run bossbar set bar_ready_g players @a[tag=!self]
 tag @s remove self
 
+execute on vehicle on vehicle if entity @s[type=turtle,tag=vehicle] run function arenaclear:kill_recursive
+
 team join Lobby @s
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a[team=Lobby]
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator]
