@@ -22,10 +22,15 @@ function game:tips/newset
 execute as @a[team=Red] run function player:actionbar
 execute as @a[team=Green] run function player:actionbar
 
+scoreboard players reset @a MVPkill
+scoreboard players reset @a MVPdeath
+scoreboard players reset @a MVProcket
+scoreboard players reset @a MVPdamage
+
 tag @a remove KillMVP
 tag @a remove DeathMVP
-tag @a remove DamageMVP
 tag @a remove RocketMVP
+tag @a remove DamageMVP
 
 bossbar set bar_lobby players @a[team=Lobby]
 bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator,gamemode=!creative]

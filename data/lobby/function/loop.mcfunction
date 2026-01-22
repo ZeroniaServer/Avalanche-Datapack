@@ -67,6 +67,11 @@ scoreboard players reset @a[team=Lobby] MVPdeath
 scoreboard players reset @a[team=Lobby] MVProcket
 scoreboard players reset @a[team=Lobby] MVPdamage
 
+tag @a[team=Lobby] remove KillMVP
+tag @a[team=Lobby] remove DeathMVP
+tag @a[team=Lobby] remove RocketMVP
+tag @a[team=Lobby] remove DamageMVP
+
 #> Translator credits
 execute as @e[type=item_display,tag=Globe,limit=1] run function lobby:credits/translators/loop
 execute as @e[type=item_display,tag=TranslatorCredit,tag=Credit] run function lobby:credits/translators/loop

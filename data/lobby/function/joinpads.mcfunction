@@ -50,8 +50,15 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot r
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.green",color:"green"}]}
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.green",color:"green"}]}
-
 execute as @a[tag=JoinGreen] run scoreboard players set @s fireworkCount 0
+scoreboard players reset @a[tag=JoinGreen] MVPkill
+scoreboard players reset @a[tag=JoinGreen] MVPdeath
+scoreboard players reset @a[tag=JoinGreen] MVProcket
+scoreboard players reset @a[tag=JoinGreen] MVPdamage
+tag @a[tag=JoinGreen] remove KillMVP
+tag @a[tag=JoinGreen] remove DeathMVP
+tag @a[tag=JoinGreen] remove RocketMVP
+tag @a[tag=JoinGreen] remove DamageMVP
 tag @a[tag=JoinGreen] remove JoinGreen
 tag @a[tag=tryJoinGreen,predicate=!lobby:joinpad_green] remove tryJoinGreen
 
@@ -80,7 +87,15 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot rep
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.red",color:"red"}]}
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s"},{translate:"lobby.joined.red",color:"red"}]}
-execute as @a[tag=JoinRed] run scoreboard players set @s fireworkCount 0
+scoreboard players set @a[tag=JoinRed] fireworkCount 0
+scoreboard players reset @a[tag=JoinRed] MVPkill
+scoreboard players reset @a[tag=JoinRed] MVPdeath
+scoreboard players reset @a[tag=JoinRed] MVProcket
+scoreboard players reset @a[tag=JoinRed] MVPdamage
+tag @a[tag=JoinRed] remove KillMVP
+tag @a[tag=JoinRed] remove DeathMVP
+tag @a[tag=JoinRed] remove RocketMVP
+tag @a[tag=JoinRed] remove DamageMVP
 tag @a[tag=JoinRed] remove JoinRed
 tag @a[tag=tryJoinRed,predicate=!lobby:joinpad_red] remove tryJoinRed
 

@@ -41,14 +41,10 @@ scoreboard players reset @s leftgame
 execute if score $gamestate CmdData matches 0..3 run tellraw @s ["",{translate:"%1$s",with:[{nbt:"ResourcePack",storage:"avalanche:messages",interpret:true},{translate:"ver1.0.4","fallback":"%1$s",with:[{nbt:"OutdatedPack",storage:"avalanche:messages",interpret:true},{nbt:"ReadyToPlay",storage:"avalanche:messages",interpret:true}]}]}]
 execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMemo] ["",{translate:"%1$s",with:[{nbt:"ResourcePack",storage:"avalanche:messages",interpret:true},{translate:"ver1.0.4","fallback":"%1$s",with:[{nbt:"OutdatedPack",storage:"avalanche:messages",interpret:true},{nbt:"SettingsBox",storage:"avalanche:messages",interpret:true,click_event:{action:"run_command",command:"/trigger settings"}}]}]}]
 tag @s remove gotTheMemo
-tag @s add SilentRespawn
-scoreboard players set @s playerHP 20
-attribute @s minecraft:block_interaction_range base set 4.5
+
+#> Other data resetting
 execute if score @s leavecheck = $curr leavecheck run function lobby:settings/announce with storage lobby:customizer
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
 scoreboard players reset @s BarricadeTracker
-scoreboard players reset @s HitmarkerTimer
-scoreboard players reset @s HitmarkerType
-tag @s remove IFrame
-scoreboard players reset @s iframe
+function player:reset
