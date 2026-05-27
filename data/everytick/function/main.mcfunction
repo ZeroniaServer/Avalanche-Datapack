@@ -24,6 +24,9 @@ effect give @a night_vision infinite 100 true
 effect give @a instant_health infinite 100 true
 effect give @a fire_resistance infinite 100 true
 
+# Below nametag visibility
+execute as @a run attribute @s below_name_distance base set 64
+
 #> No Drop
 execute as @e[type=item,tag=!SleighItem,tag=!mineBarricade] at @s if items entity @s contents *[custom_data~{NoDrop:1b}] run function everytick:nodrop
 
