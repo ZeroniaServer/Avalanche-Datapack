@@ -6,7 +6,7 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "type": "arrow"
+              "entity_type": "arrow"
             }
           }
         }
@@ -18,7 +18,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit0\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit0" ]
+              }
             }
           }
         }
@@ -30,7 +32,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit1\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit1" ]
+              }
             }
           }
         }
@@ -42,7 +46,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit2\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit2" ]
+              }
             }
           }
         }
@@ -54,7 +60,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit3\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit3" ]
+              }
             }
           }
         }
@@ -66,7 +74,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit4\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit4" ]
+              }
             }
           }
         }
@@ -78,7 +88,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit5\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit5" ]
+              }
             }
           }
         }
@@ -90,7 +102,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit6\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit6" ]
+              }
             }
           }
         }
@@ -102,7 +116,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit7\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit7" ]
+              }
             }
           }
         }
@@ -114,7 +130,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit8\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit8" ]
+              }
             }
           }
         }
@@ -126,7 +144,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit9\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit9" ]
+              }
             }
           }
         }
@@ -138,7 +158,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit10\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit10" ]
+              }
             }
           }
         }
@@ -150,7 +172,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit11\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit11" ]
+              }
             }
           }
         }
@@ -162,7 +186,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit12\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit12" ]
+              }
             }
           }
         }
@@ -174,7 +200,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit13\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit13" ]
+              }
             }
           }
         }
@@ -186,7 +214,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit14\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit14" ]
+              }
             }
           }
         }
@@ -198,7 +228,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit15\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit15" ]
+              }
             }
           }
         }
@@ -210,7 +242,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit16\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit16" ]
+              }
             }
           }
         }
@@ -222,7 +256,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit17\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit17" ]
+              }
             }
           }
         }
@@ -234,7 +270,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit18\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit18" ]
+              }
             }
           }
         }
@@ -246,7 +284,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit19\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit19" ]
+              }
             }
           }
         }
@@ -258,7 +298,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit20\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit20" ]
+              }
             }
           }
         }
@@ -270,7 +312,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit21\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit21" ]
+              }
             }
           }
         }
@@ -282,7 +326,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit22\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit22" ]
+              }
             }
           }
         }
@@ -294,7 +340,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit23\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit23" ]
+              }
             }
           }
         }
@@ -306,7 +354,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit24\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit24" ]
+              }
             }
           }
         }
@@ -318,7 +368,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit25\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit25" ]
+              }
             }
           }
         }
@@ -330,7 +382,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit26\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit26" ]
+              }
             }
           }
         }
@@ -342,7 +396,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit27\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit27" ]
+              }
             }
           }
         }
@@ -354,7 +410,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit28\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit28" ]
+              }
             }
           }
         }
@@ -366,7 +424,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit29\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit29" ]
+              }
             }
           }
         }
@@ -378,7 +438,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit30\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit30" ]
+              }
             }
           }
         }
@@ -390,7 +452,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.bit31\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.bit31" ]
+              }
             }
           }
         }
@@ -402,7 +466,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit0\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit0" ]
+              }
             }
           }
         }
@@ -414,7 +480,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit1\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit1" ]
+              }
             }
           }
         }
@@ -426,7 +494,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit2\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit2" ]
+              }
             }
           }
         }
@@ -438,7 +508,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit3\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit3" ]
+              }
             }
           }
         }
@@ -450,7 +522,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit4\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit4" ]
+              }
             }
           }
         }
@@ -462,7 +536,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit5\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit5" ]
+              }
             }
           }
         }
@@ -474,7 +550,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit6\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit6" ]
+              }
             }
           }
         }
@@ -486,7 +564,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit7\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit7" ]
+              }
             }
           }
         }
@@ -498,7 +578,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit8\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit8" ]
+              }
             }
           }
         }
@@ -510,7 +592,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit9\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit9" ]
+              }
             }
           }
         }
@@ -522,7 +606,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit10\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit10" ]
+              }
             }
           }
         }
@@ -534,7 +620,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit11\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit11" ]
+              }
             }
           }
         }
@@ -546,7 +634,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit12\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit12" ]
+              }
             }
           }
         }
@@ -558,7 +648,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit13\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit13" ]
+              }
             }
           }
         }
@@ -570,7 +662,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit14\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit14" ]
+              }
             }
           }
         }
@@ -582,7 +676,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit15\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit15" ]
+              }
             }
           }
         }
@@ -594,7 +690,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit16\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit16" ]
+              }
             }
           }
         }
@@ -606,7 +704,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit17\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit17" ]
+              }
             }
           }
         }
@@ -618,7 +718,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit18\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit18" ]
+              }
             }
           }
         }
@@ -630,7 +732,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit19\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit19" ]
+              }
             }
           }
         }
@@ -642,7 +746,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit20\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit20" ]
+              }
             }
           }
         }
@@ -654,7 +760,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit21\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit21" ]
+              }
             }
           }
         }
@@ -666,7 +774,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit22\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit22" ]
+              }
             }
           }
         }
@@ -678,7 +788,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit23\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit23" ]
+              }
             }
           }
         }
@@ -690,7 +802,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit24\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit24" ]
+              }
             }
           }
         }
@@ -702,7 +816,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit25\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit25" ]
+              }
             }
           }
         }
@@ -714,7 +830,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit26\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit26" ]
+              }
             }
           }
         }
@@ -726,7 +844,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit27\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit27" ]
+              }
             }
           }
         }
@@ -738,7 +858,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit28\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit28" ]
+              }
             }
           }
         }
@@ -750,7 +872,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit29\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit29" ]
+              }
             }
           }
         }
@@ -762,7 +886,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit30\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit30" ]
+              }
             }
           }
         }
@@ -774,7 +900,9 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "nbt": "{Tags:[\"entityid.nbit31\"]}"
+              "entity_tags": {
+                "all_of": [ "entityid.nbit31" ]
+              }
             }
           }
         }

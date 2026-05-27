@@ -6,10 +6,14 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "type": "minecraft:snowball",
+              "entity_type": "minecraft:snowball",
               "passenger": {
-                "type": "arrow",
-                "nbt": "{Tags:[\"Snowball\"]}"
+                "entity_type": "arrow",
+                "entity_tags": {
+                  "all_of": [
+                    "Snowball"
+                  ]
+                }
               }
             }
           }
@@ -22,10 +26,14 @@
         "damage": {
           "type": {
             "direct_entity": {
-              "type": "minecraft:snowball",
+              "entity_type": "minecraft:snowball",
               "passenger": {
-                "type": "arrow",
-                "nbt": "{Tags:[\"Iceball\"]}"
+                "entity_type": "arrow",
+                "entity_tags": {
+                  "all_of": [
+                    "Iceball"
+                  ]
+                }
               }
             }
           }
@@ -76,7 +84,7 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "type": "#entityid:targets"
+          "entity_type": "#entityid:targets"
         }
       }
     },
@@ -90,7 +98,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "#entityid:targets"
+                "entity_type": "#entityid:targets"
               }
             }
           }

@@ -4,8 +4,12 @@
       "trigger": "minecraft:target_hit",
       "conditions": {
         "projectile": {
-          "type": "arrow",
-          "nbt": "{Tags:[\"Snowball\"]}"
+          "entity_type": "arrow",
+          "entity_tags": {
+            "all_of": [
+              "Snowball"
+            ]
+          }
         }
       }
     },
@@ -13,8 +17,12 @@
       "trigger": "minecraft:target_hit",
       "conditions": {
         "projectile": {
-          "type": "arrow",
-          "nbt": "{Tags:[\"Iceball\"]}"
+          "entity_type": "arrow",
+          "entity_tags": {
+            "all_of": [
+              "Iceball"
+            ]
+          }
         }
       }
     },
@@ -26,10 +34,14 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:snowball",
+              "entity_type": "minecraft:snowball",
               "passenger": {
-                "type": "minecraft:arrow",
-                "nbt": "{Tags:[\"Snowball\"]}"
+                "entity_type": "minecraft:arrow",
+                "entity_tags": {
+                  "all_of": [
+                    "Snowball"
+                  ]
+                }
               }
             }
           }
@@ -44,10 +56,14 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:snowball",
+              "entity_type": "minecraft:snowball",
               "passenger": {
-                "type": "minecraft:arrow",
-                "nbt": "{Tags:[\"Iceball\"]}"
+                "entity_type": "minecraft:arrow",
+                "entity_tags": {
+                  "all_of": [
+                    "Iceball"
+                  ]
+                }
               }
             }
           }

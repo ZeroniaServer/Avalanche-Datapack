@@ -3,7 +3,11 @@
   "entity": "this",
   "predicate": {
     "vehicle": {
-      "nbt": "{Tags:[\"vehicle\"]}"
+      "entity_tags": {
+        "all_of": [
+          "vehicle"
+        ]
+      }
     }
   }
 }

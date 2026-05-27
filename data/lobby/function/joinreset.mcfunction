@@ -40,8 +40,8 @@ execute unless score @s leavecheck = $curr leavecheck run function lobby:welcome
 scoreboard players reset @s leftgame
 
 #> Notify players about resource pack
-execute if score $gamestate CmdData matches 0..3 run tellraw @s ["",{translate:"%1$s",with:[{nbt:"ResourcePack",storage:"avalanche:messages",interpret:true},{translate:"ver1.0.5","fallback":"%1$s",with:[{nbt:"OutdatedPack",storage:"avalanche:messages",interpret:true},{nbt:"ReadyToPlay",storage:"avalanche:messages",interpret:true}]}]}]
-execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMemo] ["",{translate:"%1$s",with:[{nbt:"ResourcePack",storage:"avalanche:messages",interpret:true},{translate:"ver1.0.5","fallback":"%1$s",with:[{nbt:"OutdatedPack",storage:"avalanche:messages",interpret:true},{nbt:"SettingsBox",storage:"avalanche:messages",interpret:true,click_event:{action:"run_command",command:"/trigger settings"}}]}]}]
+execute if score $gamestate CmdData matches 0..3 run tellraw @s ["",{translate:"%1$s",with:[{nbt:"ResourcePack",storage:"avalanche:messages",interpret:true},{translate:"ver1.0.6","fallback":"%1$s",with:[{nbt:"OutdatedPack",storage:"avalanche:messages",interpret:true},{nbt:"ReadyToPlay",storage:"avalanche:messages",interpret:true}]}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMemo] ["",{translate:"%1$s",with:[{nbt:"ResourcePack",storage:"avalanche:messages",interpret:true},{translate:"ver1.0.6","fallback":"%1$s",with:[{nbt:"OutdatedPack",storage:"avalanche:messages",interpret:true},{nbt:"SettingsBox",storage:"avalanche:messages",interpret:true,click_event:{action:"run_command",command:"/trigger settings"}}]}]}]
 tag @s remove gotTheMemo
 
 #> Other data resetting
