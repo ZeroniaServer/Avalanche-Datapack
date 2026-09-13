@@ -2,7 +2,7 @@
 tag @s[tag=finishedParkour] add templeader
 execute store result score #current bestParkourTime run scoreboard players get @s finalParkourTime
 
-setblock 0 0 0 oak_sign
+setblock 0 0 0 oak_sign{allow_op_features:true}
 data modify block 0 0 0 front_text.messages[0] set value [{selector:"@a[limit=1,tag=templeader]",color:"yellow"}]
 data modify storage lobby:parkour name set from block 0 0 0 front_text.messages[0]
 

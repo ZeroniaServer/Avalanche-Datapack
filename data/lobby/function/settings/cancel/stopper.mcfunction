@@ -2,12 +2,12 @@ function game:forcestop
 scoreboard players set $gamestate CmdData -1
 
 fill -56 53 -91 -56 54 -89 air
-setblock -56 54 -91 crimson_wall_sign[facing=west]
-setblock -56 54 -90 warped_wall_sign[facing=west]
-setblock -56 54 -89 warped_wall_sign[facing=west]
+setblock -56 54 -91 crimson_wall_sign[facing=west]{allow_op_features:true}
+setblock -56 54 -90 warped_wall_sign[facing=west]{allow_op_features:true}
+setblock -56 54 -89 warped_wall_sign[facing=west]{allow_op_features:true}
 
-setblock -56 53 -91 crimson_wall_sign[facing=west]
-setblock -56 53 -89 warped_wall_sign[facing=west]
+setblock -56 53 -91 crimson_wall_sign[facing=west]{allow_op_features:true}
+setblock -56 53 -89 warped_wall_sign[facing=west]{allow_op_features:true}
 
 function lobby:settings/refreshsigns with storage lobby:customizer
 schedule clear lobby:settings/cancel/counter
