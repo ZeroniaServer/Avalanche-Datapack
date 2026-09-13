@@ -6,9 +6,9 @@ $loot $(func) loot {\
                 {\
                     "type": "minecraft:item",\
                     "name": "minecraft:ghast_spawn_egg",\
-                    "functions": [\
+                    "modifier": [\
                         {\
-                            "function": "minecraft:set_components",\
+                            "type": "minecraft:set_components",\
                             "components": {\
                                 "minecraft:entity_data": {\
                                     "id": "minecraft:marker",\
