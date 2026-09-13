@@ -6,4 +6,4 @@ execute if entity @a[tag=self,team=Red] run tag @s add RocketItemGreen
 tag @s add RocketItem
 tag @s add FWItem
 
-item modify entity @s contents [{"function":"minecraft:set_custom_data","tag":"{Rocket:1b}"}]
+item modify entity @s contents [{"type":"minecraft:set_custom_data","tag":"{Rocket:1b}"}]

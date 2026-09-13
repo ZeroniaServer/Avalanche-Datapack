@@ -8,111 +8,109 @@
                     "name": "minecraft:snowball"
                 }
             ],
-            "functions": [
-                {
-                    "function": "minecraft:set_components",
-                    "components": {
-                        "minecraft:custom_name": [
+            "modifier": {
+                "type": "minecraft:set_components",
+                "components": {
+                    "minecraft:custom_name": [
+                        {
+                            "translate": "powerup.iceball.name",
+                            "italic": false,
+                            "color": "dark_aqua"
+                        }
+                    ],
+                    "minecraft:lore": [
+                        [
                             {
-                                "translate": "powerup.iceball.name",
+                                "translate": ":crossed_swords:",
+                                "color": "white",
+                                "italic": false
+                            },
+                            {
+                                "text": " "
+                            },
+                            {
+                                "translate": "powerup.iceball.effect.damage.1",
                                 "italic": false,
-                                "color": "dark_aqua"
+                                "color": "red"
                             }
                         ],
-                        "minecraft:lore": [
-                            [
-                                {
-                                    "translate": ":crossed_swords:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.iceball.effect.damage.1",
-                                    "italic": false,
-                                    "color": "red"
-                                }
-                            ],
-                            [
-                                {
-                                    "translate": ":crossed_swords:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.iceball.effect.damage.2",
-                                    "italic": false,
-                                    "color": "red"
-                                }
-                            ],
-                            [
-                                {
-                                    "translate": ":beginner:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.iceball.effect.support.1",
-                                    "italic": false,
-                                    "color": "blue"
-                                }
-                            ],
-                            [
-                                {
-                                    "translate": ":crossed_swords:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.iceball.effect.support.2",
-                                    "italic": false,
-                                    "color": "blue"
-                                }
-                            ],
-                            [
-                                {
-                                    "translate": ":hourglass:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.iceball.effect.temporary.1",
-                                    "italic": false,
-                                    "color": "gold"
-                                }
-                            ]
+                        [
+                            {
+                                "translate": ":crossed_swords:",
+                                "color": "white",
+                                "italic": false
+                            },
+                            {
+                                "text": " "
+                            },
+                            {
+                                "translate": "powerup.iceball.effect.damage.2",
+                                "italic": false,
+                                "color": "red"
+                            }
                         ],
-                        "minecraft:item_model": "minecraft:weapons/iceball",
-                        "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:use_cooldown": {
-                            "seconds": 3,
-                            "cooldown_group": "iceball"
-                        },
-                        "can_break": {
-                            "blocks": "minecraft:target"
-                        },
-                        "tooltip_display": {
-                            "hidden_components": [
-                                "can_break"
-                            ]
-                        }
+                        [
+                            {
+                                "translate": ":beginner:",
+                                "color": "white",
+                                "italic": false
+                            },
+                            {
+                                "text": " "
+                            },
+                            {
+                                "translate": "powerup.iceball.effect.support.1",
+                                "italic": false,
+                                "color": "blue"
+                            }
+                        ],
+                        [
+                            {
+                                "translate": ":crossed_swords:",
+                                "color": "white",
+                                "italic": false
+                            },
+                            {
+                                "text": " "
+                            },
+                            {
+                                "translate": "powerup.iceball.effect.support.2",
+                                "italic": false,
+                                "color": "blue"
+                            }
+                        ],
+                        [
+                            {
+                                "translate": ":hourglass:",
+                                "color": "white",
+                                "italic": false
+                            },
+                            {
+                                "text": " "
+                            },
+                            {
+                                "translate": "powerup.iceball.effect.temporary.1",
+                                "italic": false,
+                                "color": "gold"
+                            }
+                        ]
+                    ],
+                    "minecraft:item_model": "minecraft:weapons/iceball",
+                    "minecraft:custom_data": "{NoDrop:1b}",
+                    "minecraft:use_cooldown": {
+                        "seconds": 3,
+                        "cooldown_group": "iceball"
+                    },
+                    "can_break": {
+                        "blocks": "minecraft:target"
+                    },
+                    "tooltip_display": {
+                        "hidden_components": [
+                            "can_break"
+                        ]
                     }
                 }
-            ]
+            }
         }
     ]
 }

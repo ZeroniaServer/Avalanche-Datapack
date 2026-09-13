@@ -8,16 +8,14 @@
                     "value": "powerups:barricade"
                 }
             ],
-            "functions": [
-                {
-                    "function": "minecraft:set_count",
-                    "count": {
-                        "type": "minecraft:score",
-                        "target": "this",
-                        "score": "hasBarricades"
-                    }
+            "modifier": {
+                "type": "minecraft:set_count",
+                "count": {
+                    "type": "minecraft:score",
+                    "target": "this",
+                    "score": "hasBarricades"
                 }
-            ]
+            }
         }
     ]
 }

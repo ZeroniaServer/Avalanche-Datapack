@@ -1,9 +1,6 @@
-[
-    {
-      "function": "minecraft:set_components",
-      "components": {
+{
+    "type": "minecraft:set_components",
+    "components": {
         "minecraft:item_model": "minecraft:weapons/hotchoco_drinking"
-      }
     }
-  ]
-  
+}

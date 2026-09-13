@@ -7,7 +7,7 @@
                     "type": {
                         "tags": [
                             {
-                                "id": "powerups:suffocate",
+                                "id": "#powerups:suffocate",
                                 "expected": true
                             }
                         ]

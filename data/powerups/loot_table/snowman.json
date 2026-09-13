@@ -8,18 +8,16 @@
                     "name": "minecraft:ghast_spawn_egg"
                 }
             ],
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Red"
-                    }
+            "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "Red"
                 }
-            ],
-            "functions": [
+            },
+            "modifier": [
                 {
-                    "function": "minecraft:set_components",
+                    "type": "minecraft:set_components",
                     "components": {
                         "minecraft:item_name": {
                             "translate": "powerup.snowman.name",
@@ -84,20 +82,18 @@
                     }
                 },
                 {
-                    "function": "minecraft:set_custom_data",
+                    "type": "minecraft:set_custom_data",
                     "tag": "{Blank:1b}",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:entity_scores",
-                                "entity": "this",
-                                "scores": {
-                                    "spawnPlaceable": 0
-                                }
+                    "condition": {
+                        "type": "minecraft:inverted",
+                        "term": {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "spawnPlaceable": 0
                             }
                         }
-                    ]
+                    }
                 }
             ]
         },
@@ -109,18 +105,16 @@
                     "name": "minecraft:ghast_spawn_egg"
                 }
             ],
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Green"
-                    }
+            "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "Green"
                 }
-            ],
-            "functions": [
+            },
+            "modifier": [
                 {
-                    "function": "minecraft:set_components",
+                    "type": "minecraft:set_components",
                     "components": {
                         "minecraft:item_name": {
                             "translate": "powerup.snowman.name",
@@ -189,20 +183,18 @@
                     }
                 },
                 {
-                    "function": "minecraft:set_custom_data",
+                    "type": "minecraft:set_custom_data",
                     "tag": "{Blank:1b}",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:entity_scores",
-                                "entity": "this",
-                                "scores": {
-                                    "spawnPlaceable": 0
-                                }
+                    "condition": {
+                        "type": "minecraft:inverted",
+                        "term": {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "spawnPlaceable": 0
                             }
                         }
-                    ]
+                    }
                 }
             ]
         }

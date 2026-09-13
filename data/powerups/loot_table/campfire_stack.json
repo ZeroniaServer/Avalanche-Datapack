@@ -8,12 +8,10 @@
                     "value": "powerups:campfire"
                 }
             ],
-            "functions": [
-                {
-                    "function": "minecraft:set_count",
-                    "count": 64
-                }
-            ]
+            "modifier": {
+                "type": "minecraft:set_count",
+                "count": 64
+            }
         }
     ]
 }

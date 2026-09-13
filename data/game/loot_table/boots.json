@@ -8,39 +8,35 @@
                     "name": "minecraft:diamond_boots"
                 }
             ],
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Red"
+            "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "Red"
+                }
+            },
+            "modifier": {
+                "type": "minecraft:set_components",
+                "components": {
+                    "minecraft:item_name": {
+                        "translate": "game.armor.red.name",
+                        "color": "red"
+                    },
+                    "minecraft:custom_data": "{NoDrop:1b}",
+                    "minecraft:unbreakable": {},
+                    "minecraft:enchantments": {
+                        "minecraft:binding_curse": 1
+                    },
+                    "minecraft:enchantment_glint_override": false,
+                    "!minecraft:attribute_modifiers": {},
+                    "tooltip_display": {
+                        "hidden_components": [
+                            "enchantments",
+                            "unbreakable"
+                        ]
                     }
                 }
-            ],
-            "functions": [
-                {
-                    "function": "minecraft:set_components",
-                    "components": {
-                        "minecraft:item_name": {
-                            "translate": "game.armor.red.name",
-                            "color": "red"
-                        },
-                        "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:unbreakable": {},
-                        "minecraft:enchantments": {
-                            "minecraft:binding_curse": 1
-                        },
-                        "minecraft:enchantment_glint_override": false,
-                        "!minecraft:attribute_modifiers": {},
-                        "tooltip_display": {
-                            "hidden_components": [
-                                "enchantments",
-                                "unbreakable"
-                            ]
-                        }
-                    }
-                }
-            ]
+            }
         },
         {
             "rolls": 1,
@@ -50,39 +46,35 @@
                     "name": "minecraft:golden_boots"
                 }
             ],
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Green"
+            "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "Green"
+                }
+            },
+            "modifier": {
+                "type": "minecraft:set_components",
+                "components": {
+                    "minecraft:item_name": {
+                        "translate": "game.armor.green.name",
+                        "color": "green"
+                    },
+                    "minecraft:custom_data": "{NoDrop:1b}",
+                    "minecraft:unbreakable": {},
+                    "minecraft:enchantments": {
+                        "minecraft:binding_curse": 1
+                    },
+                    "minecraft:enchantment_glint_override": false,
+                    "!minecraft:attribute_modifiers": {},
+                    "tooltip_display": {
+                        "hidden_components": [
+                            "enchantments",
+                            "unbreakable"
+                        ]
                     }
                 }
-            ],
-            "functions": [
-                {
-                    "function": "minecraft:set_components",
-                    "components": {
-                        "minecraft:item_name": {
-                            "translate": "game.armor.green.name",
-                            "color": "green"
-                        },
-                        "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:unbreakable": {},
-                        "minecraft:enchantments": {
-                            "minecraft:binding_curse": 1
-                        },
-                        "minecraft:enchantment_glint_override": false,
-                        "!minecraft:attribute_modifiers": {},
-                        "tooltip_display": {
-                            "hidden_components": [
-                                "enchantments",
-                                "unbreakable"
-                            ]
-                        }
-                    }
-                }
-            ]
+            }
         }
     ]
 }

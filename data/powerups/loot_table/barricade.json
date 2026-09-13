@@ -8,9 +8,9 @@
                     "name": "minecraft:clay"
                 }
             ],
-            "functions": [
+            "modifier": [
                 {
-                    "function": "minecraft:set_components",
+                    "type": "minecraft:set_components",
                     "components": {
                         "minecraft:custom_name": [
                             {
@@ -68,20 +68,18 @@
                     }
                 },
                 {
-                    "function": "minecraft:set_custom_data",
+                    "type": "minecraft:set_custom_data",
                     "tag": "{Blank:1b}",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:entity_scores",
-                                "entity": "this",
-                                "scores": {
-                                    "placeBarricade": 0
-                                }
+                    "condition": {
+                        "type": "minecraft:inverted",
+                        "term": {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "placeBarricade": 0
                             }
                         }
-                    ]
+                    }
                 }
             ]
         }

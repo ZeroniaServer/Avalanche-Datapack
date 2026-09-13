@@ -1,18 +1,17 @@
 {
-    "condition": "minecraft:entity_properties",
+    "type": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "equipment": {
-        "offhand": {
-          "items": "minecraft:snowball",
-          "components": {
-            "minecraft:use_cooldown": {
-              "seconds": 0.12,
-              "cooldown_group": "snowball"
+        "equipment": {
+            "offhand": {
+                "items": "minecraft:snowball",
+                "components": {
+                    "minecraft:use_cooldown": {
+                        "seconds": 0.12,
+                        "cooldown_group": "snowball"
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
-  
+}

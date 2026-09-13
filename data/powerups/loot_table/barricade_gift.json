@@ -8,12 +8,10 @@
                     "value": "powerups:barricade"
                 }
             ],
-            "functions": [
-                {
-                    "function": "minecraft:set_count",
-                    "count": 12
-                }
-            ]
+            "modifier": {
+                "type": "minecraft:set_count",
+                "count": 12
+            }
         }
     ]
 }

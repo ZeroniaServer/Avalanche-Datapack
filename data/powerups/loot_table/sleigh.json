@@ -6,31 +6,29 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:ghast_spawn_egg",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:entity_data": {
-                                    "id": "minecraft:marker",
-                                    "Tags": [
-                                        "SpawnSleigh",
-                                        "dura0"
-                                    ]
-                                }
+                    "modifier": {
+                        "type": "minecraft:set_components",
+                        "components": {
+                            "minecraft:entity_data": {
+                                "id": "minecraft:marker",
+                                "Tags": [
+                                    "SpawnSleigh",
+                                    "dura0"
+                                ]
                             }
                         }
-                    ]
+                    }
                 }
             ]
         }
     ],
-    "functions": [
+    "modifier": [
         {
-            "function": "minecraft:set_count",
+            "type": "minecraft:set_count",
             "count": 1
         },
         {
-            "function": "minecraft:set_components",
+            "type": "minecraft:set_components",
             "components": {
                 "minecraft:can_place_on": {
                     "blocks": "#powerups:placeable"

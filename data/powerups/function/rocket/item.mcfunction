@@ -1,6 +1,6 @@
 scoreboard players add @s lifetime 1
 execute if score @s lifetime matches 140 run particle explosion ~ ~ ~ 0 0 0 0 1 force
-execute if score @s lifetime matches 140 run item modify entity @s contents [{"function":"minecraft:set_components","components":{"minecraft:item_model":"minecraft:weapons/rocket_unclaimed"}}]
+execute if score @s lifetime matches 140 run item modify entity @s contents [{"type":"minecraft:set_components","components":{"minecraft:item_model":"minecraft:weapons/rocket_unclaimed"}}]
 execute if score @s lifetime matches 140.. run tag @s remove RocketItemGreen
 execute if score @s lifetime matches 140.. run tag @s remove RocketItemRed
 execute if score @s lifetime matches 140 run playsound rocketconvert master @a ~ ~ ~ 1 2
@@ -36,7 +36,7 @@ data modify entity @s[tag=higharena,predicate=!game:high_arena,scores={CmdData=2
 tag @s[tag=higharena,predicate=!game:high_arena,scores={CmdData=20..}] remove higharena
 
 #> Low arena floating
-execute at @s if predicate {condition:"location_check",predicate:{position:{y:{max:40}}}} positioned over motion_blocking if predicate {condition:"location_check",predicate:{position:{y:{max:-64}}}} run data modify entity @s Motion[1] set value 0.05
-execute at @s positioned over motion_blocking if predicate {condition:"location_check",predicate:{position:{y:{max:-64}}}} at @s unless predicate {condition:"location_check",predicate:{position:{y:{max:42}}}} run data modify entity @s Motion[1] set value 0
+execute at @s if predicate {type:"location_check",predicate:{position:{y:{max:40}}}} positioned over motion_blocking if predicate {type:"location_check",predicate:{position:{y:{max:-64}}}} run data modify entity @s Motion[1] set value 0.05
+execute at @s positioned over motion_blocking if predicate {type:"location_check",predicate:{position:{y:{max:-64}}}} at @s unless predicate {type:"location_check",predicate:{position:{y:{max:42}}}} run data modify entity @s Motion[1] set value 0
 
 function powerups:throwable_init/airtoggle

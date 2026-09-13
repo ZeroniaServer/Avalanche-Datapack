@@ -1,73 +1,71 @@
-[
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:use_remainder": {
-                "id": "minecraft:snowball",
-                "components": {
-                    "custom_data": {
-                        "Remainder": 1,
-                        "NoDrop": 1
-                    },
-                    "minecraft:custom_name": [
+{
+    "type": "minecraft:set_components",
+    "components": {
+        "minecraft:use_remainder": {
+            "id": "minecraft:snowball",
+            "components": {
+                "custom_data": {
+                    "Remainder": 1,
+                    "NoDrop": 1
+                },
+                "minecraft:custom_name": [
+                    {
+                        "translate": "item.minecraft.snowball",
+                        "italic": false,
+                        "color": "dark_aqua"
+                    }
+                ],
+                "minecraft:lore": [
+                    [
                         {
-                            "translate": "item.minecraft.snowball",
+                            "translate": ":crossed_swords:",
+                            "color": "white",
+                            "italic": false
+                        },
+                        {
+                            "text": " "
+                        },
+                        {
+                            "translate": "powerup.snowball.effect.damage.1",
                             "italic": false,
-                            "color": "dark_aqua"
+                            "color": "red"
                         }
                     ],
-                    "minecraft:lore": [
-                        [
-                            {
-                                "translate": ":crossed_swords:",
-                                "color": "white",
-                                "italic": false
-                            },
-                            {
-                                "text": " "
-                            },
-                            {
-                                "translate": "powerup.snowball.effect.damage.1",
-                                "italic": false,
-                                "color": "red"
-                            }
-                        ],
-                        [
-                            {
-                                "translate": ":star:",
-                                "color": "white",
-                                "italic": false
-                            },
-                            {
-                                "text": " "
-                            },
-                            {
-                                "translate": "powerup.snowball.effect.special.1",
-                                "italic": false,
-                                "color": "yellow"
-                            }
-                        ]
-                    ],
-                    "minecraft:item_model": "minecraft:weapons/snowball",
-                    "minecraft:use_cooldown": {
-                        "seconds": 0.25,
-                        "cooldown_group": "snowball"
-                    },
-                    "can_break": {
-                        "blocks": "minecraft:target"
-                    },
-                    "tooltip_display": {
-                        "hidden_components": [
-                            "can_break"
-                        ]
-                    }
+                    [
+                        {
+                            "translate": ":star:",
+                            "color": "white",
+                            "italic": false
+                        },
+                        {
+                            "text": " "
+                        },
+                        {
+                            "translate": "powerup.snowball.effect.special.1",
+                            "italic": false,
+                            "color": "yellow"
+                        }
+                    ]
+                ],
+                "minecraft:item_model": "minecraft:weapons/snowball",
+                "minecraft:use_cooldown": {
+                    "seconds": 0.25,
+                    "cooldown_group": "snowball"
+                },
+                "can_break": {
+                    "blocks": "minecraft:target"
+                },
+                "tooltip_display": {
+                    "hidden_components": [
+                        "can_break"
+                    ]
                 }
-            },
-            "custom_data": {
-                "Remainder": 0,
-                "Slow": 0,
-                "NoDrop": 1
             }
+        },
+        "custom_data": {
+            "Remainder": 0,
+            "Slow": 0,
+            "NoDrop": 1
         }
     }
-]
+}

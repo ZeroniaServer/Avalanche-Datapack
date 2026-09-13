@@ -1,5 +1,5 @@
 execute if items entity @s contents clay[custom_data~{MineBarricade:1b}] run tag @s add mineBarricade
-execute if items entity @s contents clay[custom_data~{MineBarricade:1b}] run return run item modify entity @s contents {"function":"set_components","components":{"custom_data":"{NoDrop:1b,Blank:1b}"}}
+execute if items entity @s contents clay[custom_data~{MineBarricade:1b}] run return run item modify entity @s contents {"type":"set_components","components":{"custom_data":"{NoDrop:1b,Blank:1b}"}}
 
 data modify entity @s[tag=!processed] Owner set from entity @s Thrower
 data merge entity @s {NoGravity:1b}

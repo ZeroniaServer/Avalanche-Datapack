@@ -1,9 +1,7 @@
-[
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:item_model": "minecraft:weapons/rocket_red",
-            "minecraft:custom_data": "{NoDrop:1b,Rocket:1b}"
-        }
+{
+    "type": "minecraft:set_components",
+    "components": {
+        "minecraft:item_model": "minecraft:weapons/rocket_red",
+        "minecraft:custom_data": "{NoDrop:1b,Rocket:1b}"
     }
-]
+}
