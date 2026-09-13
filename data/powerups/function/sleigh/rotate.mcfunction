@@ -1,6 +1,4 @@
-summon marker ~ ~ ~ {Tags:["vehicle"]}
-execute store result entity @e[type=marker,tag=vehicle,limit=1] Pos[0] double 0.01 run scoreboard players operation p vehicle.dx += v vehicle.dx
-execute store result entity @e[type=marker,tag=vehicle,limit=1] Pos[2] double 0.01 run scoreboard players operation p vehicle.dz += v vehicle.dz
-#execute at @e[type=marker,tag=vehicle] run particle flame ~ ~1 ~ 0 0 0 0 1
-execute anchored eyes facing entity @e[type=marker,tag=vehicle,limit=1] eyes positioned ^ ^ ^20 rotated as @s positioned ^ ^ ^40 facing entity @s eyes facing ^ ^ ^-1 run rotate @s ~0.25 0
-kill @e[type=marker,tag=vehicle]
+data modify entity 00000000-0000-0001-0000-000100000000 Pos[0] set compute default float {type:"add",inputs:[{type:"storage",storage:"avalanche:sleigh",path:"pos[0]"},{type:"storage",storage:"avalanche:sleigh","path":"vehicle.dx"}]}
+data modify entity 00000000-0000-0001-0000-000100000000 Pos[2] set compute default float {type:"add",inputs:[{type:"storage",storage:"avalanche:sleigh",path:"pos[2]"},{type:"storage",storage:"avalanche:sleigh","path":"vehicle.dz"}]}
+#execute at 00000000-0000-0001-0000-000100000000 run particle flame ~ ~1 ~ 0 0 0 0 1
+execute anchored eyes facing entity 00000000-0000-0001-0000-000100000000 eyes positioned ^ ^ ^20 rotated as @s positioned ^ ^ ^40 facing entity @s eyes facing ^ ^ ^-1 run rotate @s ~0.25 0

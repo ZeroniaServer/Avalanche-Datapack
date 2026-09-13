@@ -1,0 +1,45 @@
+{
+    "type": "minecraft:min",
+    "inputs": [
+        0.01,
+        {
+            "type": "minecraft:abs",
+            "input": {
+                "type": "minecraft:mul",
+                "inputs": [
+                    {
+                        "type": "minecraft:storage",
+                        "storage": "avalanche:sleigh",
+                        "path": "friction.val"
+                    },
+                    {
+                        "type": "minecraft:sin",
+                        "input": {
+                            "type": "minecraft:mul",
+                            "inputs": [
+                                {
+                                    "type": "minecraft:div",
+                                    "left": 3.141592653589793,
+                                    "right": 180
+                                },
+                                {
+                                    "type": "minecraft:storage",
+                                    "storage": "avalanche:sleigh",
+                                    "path": "rotX"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "minecraft:abs",
+            "input": {
+                "type": "minecraft:storage",
+                "storage": "avalanche:sleigh",
+                "path": "vehicle.dz"
+            }
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "any_of",
+    "terms": [
+        {
+            "type": "inverted",
+            "term": {
+                "type": "minecraft:float_value_check",
+                "value": {
+                    "type": "minecraft:storage",
+                    "storage": "avalanche:sleigh",
+                    "path": "vehicle.dx"
+                },
+                "test": 0
+            }
+        },
+        {
+            "type": "inverted",
+            "term": {
+                "type": "minecraft:float_value_check",
+                "value": {
+                    "type": "minecraft:storage",
+                    "storage": "avalanche:sleigh",
+                    "path": "vehicle.dz"
+                },
+                "test": 0
+            }
+        }
+    ]
+}

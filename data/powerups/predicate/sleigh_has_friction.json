@@ -1,0 +1,13 @@
+{
+    "type": "inverted",
+    "term": {
+        "type": "minecraft:float_value_check",
+        "value": {
+            "type": "minecraft:storage",
+            "storage": "avalanche:sleigh",
+            "path": "friction.val"
+        },
+        "test": 0
+    }
+    
+}

@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:div",
+    "left": {
+        "type": "minecraft:mul",
+        "inputs": [
+            {
+                "type": "minecraft:storage",
+                "storage": "avalanche:sleigh",
+                "path": "vehicle.dz"
+            },
+            {
+                "type": "minecraft:min",
+                "inputs": [
+                    {
+                        "type": "minecraft:storage",
+                        "storage": "avalanche:sleigh",
+                        "path": "magnitude"
+                    },
+                    {
+                        "type": "minecraft:storage",
+                        "storage": "avalanche:sleigh",
+                        "path": "max"
+                    }
+                ]
+            }
+        ]
+    },
+    "right": {
+        "type": "minecraft:storage",
+        "storage": "avalanche:sleigh",
+        "path": "magnitude"
+    }
+}

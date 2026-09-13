@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:length",
+    "inputs": [
+        {
+            "type": "minecraft:storage",
+            "storage": "avalanche:sleigh",
+            "path": "vehicle.dx"
+        },
+        {
+            "type": "minecraft:storage",
+            "storage": "avalanche:sleigh",
+            "path": "vehicle.dz"
+        }
+    ]
+}

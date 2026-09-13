@@ -1,0 +1,36 @@
+{
+    "type": "add",
+    "inputs": [
+        {
+            "type": "storage",
+            "storage": "avalanche:sleigh",
+            "path": "vehicle.dx"
+        },
+        {
+            "type": "mul",
+            "inputs": [
+                {
+                    "type": "storage",
+                    "storage": "avalanche:sleigh",
+                    "path": "friction.x"
+                },
+                {
+                    "type": "div",
+                    "left": {
+                        "type": "abs",
+                        "input": {
+                            "type": "storage",
+                            "storage": "avalanche:sleigh",
+                            "path": "vehicle.dx"
+                        }
+                    },
+                    "right": {
+                        "type": "storage",
+                        "storage": "avalanche:sleigh",
+                        "path": "vehicle.dx"
+                    }
+                }
+            ]
+        }
+    ]
+}

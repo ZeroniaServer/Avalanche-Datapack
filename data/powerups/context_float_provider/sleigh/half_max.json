@@ -1,0 +1,9 @@
+{
+    "type": "div",
+    "left": {
+        "type": "storage",
+        "storage": "avalanche:sleigh",
+        "path": "max"
+    },
+    "right": 2
+}

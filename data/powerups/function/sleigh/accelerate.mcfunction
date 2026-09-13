@@ -1,34 +1,26 @@
-execute store result score c vehicle.dx run data get storage cw_wasd Motion[0] 10000.0
-execute store result score c vehicle.dz run data get storage cw_wasd Motion[2] 10000.0
+# accelerate x and z by input motion
+data modify storage avalanche:sleigh vehicle.dx set compute default float powerups:sleigh/accelerate_x
+data modify storage avalanche:sleigh vehicle.dz set compute default float powerups:sleigh/accelerate_z
 
-scoreboard players operation c vehicle.dx /= .damper vehicle
-scoreboard players operation c vehicle.dz /= .damper vehicle
-scoreboard players operation @s vehicle.dx += c vehicle.dx
-scoreboard players operation @s vehicle.dz += c vehicle.dz
+# calculate magnitude
+data modify storage avalanche:sleigh magnitude set compute default float powerups:sleigh/magnitude
 
-# normalize
-scoreboard players operation #magnitude vehicle = @s vehicle.dx
-scoreboard players operation #magnitude vehicle *= #magnitude vehicle
-scoreboard players operation #magnitude vehicle.dz = @s vehicle.dz
-scoreboard players operation #magnitude vehicle.dz *= #magnitude vehicle.dz
-scoreboard players operation #magnitude vehicle += #magnitude vehicle.dz
-scoreboard players operation $math.isqrt.x bs.in = #magnitude vehicle
-function #bs.math:isqrt
-execute if score #sprint vehicle matches 1 run scoreboard players set #max vehicle 500
-execute unless score #sprint vehicle matches 1 run scoreboard players set #max vehicle 350
+# calculate max speed while sprinting
+execute if score #sprint vehicle matches 1 run data modify storage avalanche:sleigh max set value 0.5
+execute unless score #sprint vehicle matches 1 run data modify storage avalanche:sleigh max set value 0.35
 
 # slow down under blizzards
 tag @s add sleighself
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 if entity @e[type=turtle,tag=sleighself,dx=6,dy=6,dz=6,limit=1] run scoreboard players set #max vehicle 200
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 if entity @e[type=turtle,tag=sleighself,dx=6,dy=6,dz=6,limit=1] run data modify storage avalanche:sleigh max set value 0.2
 tag @s remove sleighself
 
 # slow down while throwing
-execute if entity @s[tag=slowThrow] run scoreboard players operation #max vehicle /= 2 const
+execute if entity @s[tag=slowThrow] run data modify storage avalanche:sleigh max set compute default float powerups:sleigh/half_max
 tag @s remove slowThrow
 
 # slow down while drinking
-execute if entity @s[tag=DrinkChoco] run scoreboard players operation #max vehicle /= 2 const
+execute if entity @s[tag=DrinkChoco] run data modify storage avalanche:sleigh max set compute default float powerups:sleigh/half_max
 
-execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
-
-execute if score .rot vehicle matches -2147483648..2147483647 run scoreboard players operation @s vehicle.rot = .rot vehicle
+# clamp current motion to max speed
+data modify storage avalanche:sleigh vehicle.dx set compute default float powerups:sleigh/clamp_x
+data modify storage avalanche:sleigh vehicle.dz set compute default float powerups:sleigh/clamp_z

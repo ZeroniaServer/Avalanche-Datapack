@@ -1,0 +1,21 @@
+{
+    "type": "add",
+    "inputs": [
+        {
+            "type": "storage",
+            "storage": "avalanche:sleigh",
+            "path": "vehicle.dx"
+        },
+        {
+            "type": "mul",
+            "inputs": [
+                {
+                    "type": "storage",
+                    "storage": "cw_wasd",
+                    "path": "Motion[0]"
+                },
+                5.0
+            ]
+        }
+    ]
+}
