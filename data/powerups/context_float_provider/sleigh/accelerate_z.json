@@ -14,7 +14,7 @@
                     "storage": "cw_wasd",
                     "path": "Motion[2]"
                 },
-                5.0
+                5000.0
             ]
         }
     ]

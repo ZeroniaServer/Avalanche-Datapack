@@ -2,27 +2,31 @@
     "type": "any_of",
     "terms": [
         {
-            "type": "inverted",
-            "term": {
-                "type": "minecraft:float_value_check",
-                "value": {
+            "type": "minecraft:float_value_check",
+            "value": {
+                "type": "abs",
+                "input": {
                     "type": "minecraft:storage",
                     "storage": "avalanche:sleigh",
                     "path": "vehicle.dx"
-                },
-                "test": 0
+                }
+            },
+            "test": {
+                "min": 1
             }
         },
         {
-            "type": "inverted",
-            "term": {
-                "type": "minecraft:float_value_check",
-                "value": {
+            "type": "minecraft:float_value_check",
+            "value": {
+                "type": "abs",
+                "input": {
                     "type": "minecraft:storage",
                     "storage": "avalanche:sleigh",
                     "path": "vehicle.dz"
-                },
-                "test": 0
+                }
+            },
+            "test": {
+                "min": 1
             }
         }
     ]

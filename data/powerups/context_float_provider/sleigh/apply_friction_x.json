@@ -29,7 +29,8 @@
                         "storage": "avalanche:sleigh",
                         "path": "vehicle.dx"
                     }
-                }
+                },
+                -1
             ]
         }
     ]

@@ -6,12 +6,12 @@ data modify storage avalanche:sleigh vehicle.dz set compute default float poweru
 data modify storage avalanche:sleigh magnitude set compute default float powerups:sleigh/magnitude
 
 # calculate max speed while sprinting
-execute if score #sprint vehicle matches 1 run data modify storage avalanche:sleigh max set value 0.5
-execute unless score #sprint vehicle matches 1 run data modify storage avalanche:sleigh max set value 0.35
+execute if score #sprint vehicle matches 1 run data modify storage avalanche:sleigh max set value 500
+execute unless score #sprint vehicle matches 1 run data modify storage avalanche:sleigh max set value 350
 
 # slow down under blizzards
 tag @s add sleighself
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 if entity @e[type=turtle,tag=sleighself,dx=6,dy=6,dz=6,limit=1] run data modify storage avalanche:sleigh max set value 0.2
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 if entity @e[type=turtle,tag=sleighself,dx=6,dy=6,dz=6,limit=1] run data modify storage avalanche:sleigh max set value 200
 tag @s remove sleighself
 
 # slow down while throwing
