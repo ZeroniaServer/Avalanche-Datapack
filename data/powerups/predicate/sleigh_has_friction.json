@@ -6,6 +6,6 @@
         "path": "friction.val"
     },
     "test": {
-        "min": 100
+        "min": 1
     }
 }

@@ -1,7 +1,6 @@
 {
     "type": "minecraft:min",
     "inputs": [
-        100,
         {
             "type": "minecraft:abs",
             "input": {
@@ -13,7 +12,7 @@
                         "path": "friction.val"
                     },
                     {
-                        "type": "minecraft:sin",
+                        "type": "minecraft:cos",
                         "input": {
                             "type": "minecraft:mul",
                             "inputs": [

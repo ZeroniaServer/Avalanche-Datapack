@@ -1,5 +1,5 @@
 # compute friction based on rotation
-execute unless score #input math matches 1.. on passengers if entity @s[type=minecart] run data modify storage avalanche:sleigh rotX set from entity @s Rotation[0]
+execute on passengers if entity @s[type=minecart] run data modify storage avalanche:sleigh rotX set from entity @s Rotation[0]
 data modify storage avalanche:sleigh friction.x set compute entity @s float powerups:sleigh/friction_x
 data modify storage avalanche:sleigh friction.z set compute entity @s float powerups:sleigh/friction_z
 

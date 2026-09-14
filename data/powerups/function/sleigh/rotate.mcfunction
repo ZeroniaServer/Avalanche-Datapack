@@ -1,6 +1,4 @@
-tellraw @a [{"nbt":"pos",storage:"avalanche:sleigh",interpret:false}]
 data modify entity 48b56ce7-0549-464c-801a-614d90980f40 Pos[0] set compute default float {type:"add",inputs:[{type:"storage",storage:"avalanche:sleigh",path:"pos[0]"},{type:"mul",inputs:[{type:"storage",storage:"avalanche:sleigh","path":"vehicle.dx"},0.1]}]}
 data modify entity 48b56ce7-0549-464c-801a-614d90980f40 Pos[2] set compute default float {type:"add",inputs:[{type:"storage",storage:"avalanche:sleigh",path:"pos[2]"},{type:"mul",inputs:[{type:"storage",storage:"avalanche:sleigh","path":"vehicle.dz"},0.1]}]}
-tellraw @a [{"nbt":"Pos",entity:"48b56ce7-0549-464c-801a-614d90980f40",interpret:false}]
 execute anchored eyes facing entity 48b56ce7-0549-464c-801a-614d90980f40 eyes positioned ^ ^ ^20 rotated as @s positioned ^ ^ ^40 facing entity @s eyes facing ^ ^ ^-1 run rotate @s ~0.25 0
 tp 48b56ce7-0549-464c-801a-614d90980f40 0 0 0
